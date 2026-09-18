@@ -4,8 +4,6 @@ using json = nlohmann::json;
 
 class JsonOpenerAbstract
 {
-protected:
-    JsonOpenerAbstract() {}
-
-    virtual json open();
+public:
+    virtual json open() = 0;
 };
