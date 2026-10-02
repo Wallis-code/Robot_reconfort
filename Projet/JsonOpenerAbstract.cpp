@@ -5,5 +5,5 @@ using json = nlohmann::json;
 class JsonOpenerAbstract
 {
 public:
-    virtual json open() = 0;
+    virtual json open(const char* filename) = 0;
 };
