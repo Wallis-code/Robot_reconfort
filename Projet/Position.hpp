@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 
+//Nord, Sud, Est, Ouest (west en anglais)
 enum Direction { N, S, E, W };
 
 class Position {
