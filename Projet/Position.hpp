@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 
 enum Direction { N, S, E, W };
@@ -6,14 +7,15 @@ class Position {
 private:    
     int x;
     int y;
-
+    
+public:        
+    //constructeurs
     Position() : x(0), y(0) {}
     Position(int xVal, int yVal) : x(xVal), y(yVal) {}
-
-public:    
+    
     //getter setter
-    int getX(){ return x;}
-    int getY(){ return y;}
+    int getX() const { return x;}
+    int getY() const { return y;}
     void setX(int newX){ x = newX;}
     void setY(int newY){ y = newY;}
 
@@ -39,10 +41,6 @@ public:
     }
 };
 
-
-
-/*
-std::ostream& operator<<(std::ostream& os, const Position v) {
-    return os << "(" << v.x << ", " << v.y << ")";
+inline std::ostream& operator<<(std::ostream& os, const Position& v) {
+    return os << "(" << v.getX() << ", " << v.getY() << ")";
 }
-    */
