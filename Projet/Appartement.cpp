@@ -4,14 +4,17 @@
 
 
 class Appartement : public JsonOpenerAbstract{
+protected:
+    json data;
+    int dimensions[2];
+    Grille grille;
+
 public:
-        json open(const char* fileName){
-            std::ifstream f(fileName);
-            json data = json::parse(f);  
-            if((data["format"] != "robot-reconfort/carte") || (data["version"] != 1)){
-                std::cerr << "Format ou version de la carte appartement incorrect" << std::endl;
-                return NULL;
-            }                      
-            return data;
+    Appartement(const char* fileName){
+        data = open(fileName, "robot-reconfort/carte");
+        if(data == NULL){
+            std::cerr << "Format ou version de la carte appartement incorrect" << std::endl;
+            return;
         }
+    }
 };
