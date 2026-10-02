@@ -1,4 +1,5 @@
 #include "JsonOpenerAbstract.cpp"
+#include "Grille.hpp"
 #include <fstream>
 #include <iostream>
 
@@ -17,4 +18,6 @@ public:
             return;
         }
     }
+
+    json getData(){return data;}
 };

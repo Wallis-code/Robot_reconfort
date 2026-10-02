@@ -2,8 +2,7 @@
 #include <iostream>
 
 int main(){
-    Appartement appart;
-    json data = appart.open("cartes/appartement_01.json");
-    std::cout << data.dump(4) << std::endl; 
+    Appartement appart("cartes/appartement_01.json");
+    std::cout << appart.getData()["grille"] << std::endl; 
     return 0;
 }
