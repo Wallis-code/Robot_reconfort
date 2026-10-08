@@ -1,56 +1,65 @@
-#include "JsonOpenerAbstract.cpp"
-#include "Position.hpp"
-#include <fstream>
-#include <iostream>
-#include <string>
+#include "Armoire.hpp"
 #include <iomanip>
+#include <iostream>
 
-class Casier {
-    std::string emotion;
-    std::string intensite;
-    std::string objet;
-    public:
-        Casier() {};
-        Casier(std::string emotionVal, std::string intensiteVal, std::string objetVal) {
-        emotion = emotionVal;
-        intensite = intensiteVal;
-        objet = objetVal;
+Casier::Casier(std::string emotionVal, std::string intensiteVal, std::string objetVal) {
+    emotion = emotionVal;
+    intensite = intensiteVal;
+    objet = objetVal;
+}
+
+std::string Casier::getObjet() const { return objet; }
+
+void Casier::print() const {
+    std::cout << emotion << " / " << intensite << " / " << objet;
+}
+
+Armoire::Armoire(const char* fn) {
+    data = open(fn, "robot-reconfort/armoire");
+    if (data.is_null()) {
+        std::cerr << "Armoire : data vide" << std::endl;
+        return;
     }
-    void print() const {
-    std::cout << emotion << " / " << intensite << " / " << objet << std::endl;
+    casier_depart.setX(data["casier_depart"][0]);
+    casier_depart.setY(data["casier_depart"][1]);
+
+    for (auto& c : data["casiers"]) {
+        int l = c.value("ligne", -1);
+        int col = c.value("colonne", -1);
+        if (l < 0 || l >= 3 || col < 0 || col >= 8) continue;
+
+        casiers[l][col] = Casier(
+            c["emotion"].is_string()   ? c["emotion"].get<std::string>()   : "",
+            c["intensite"].is_string() ? c["intensite"].get<std::string>() : "",
+            c["objet"].is_string()     ? c["objet"].get<std::string>()     : ""
+        );
     }
+}
 
-    std::string getObjet() const { return objet; }
-};
+json Armoire::getData() { return data; }
 
-class Armoire : public JsonOpenerAbstract {
-    protected:
-    json data;
-    Position casier_depart;
-    Casier casiers[3][8];
-    public:
-        //constructeur
-        Armoire(){};
-        Armoire(const char* fn){
-            data = open(fn , "robot-reconfort/armoire");
-            if(data == NULL) std::cerr << "Armoire : data vide" << std::endl;
-            casier_depart.setX(data["casier_depart"][0]);
-            casier_depart.setY(data["casier_depart"][1]);
+Position Armoire::getCasier_depart() { return casier_depart; }
 
-            //ranger dans les casiers
-            for (auto& c : data["casiers"]) {
-                int l = c.value("ligne", -1);
-                int col = c.value("colonne", -1);
-                if (l < 0 || l >= 3 || col < 0 || col >= 8) continue;                
-                casiers[l][col] = Casier(c["emotion"], 
-                                        c["intensite"], 
-                                        c["objet"].is_string() ? c["objet"].get<std::string>():""
-                                    );
-            }
+Casier Armoire::getCasierCase(int ligne, int colonne) const {
+    return casiers[ligne][colonne];
+}
+
+void Armoire::printCasiers() const {
+    const char* emotions[8] = {"JOIE", "CONFIANCE", "PEUR", "SURPRISE",
+                               "TRISTESSE", "DEGOUT", "COLERE", "ANTICIPATION"};
+    const char* intensites[3] = {"faible", "moyenne", "forte"};
+    const int W = 21;
+
+    std::cout << std::left << std::setw(10) << "";
+    for (auto e : emotions) std::cout << std::setw(W) << e;
+    std::cout << std::endl;
+
+    for (int l = 0; l < 3; l++) {
+        std::cout << std::setw(10) << intensites[l];
+        for (int col = 0; col < 8; col++) {
+            std::string o = casiers[l][col].getObjet();
+            std::cout << std::setw(W) << (o.empty() ? "-" : o);
         }
-
-        //méthode
-        json getData(){ return data;}
-        Position getCasier_depart(){return casier_depart;}
-        Casier getCasierCase(int i, int j){ return casiers[i][j]; }
-};
+        std::cout << std::endl;
+    }
+}
