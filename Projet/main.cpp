@@ -5,7 +5,8 @@ int main()
 {
     Armoire armoire("donnees/armoire_standard.json");
     json data = armoire.getData();    
-    std::cout << armoire.getCasier_depart() << std::endl;
+    
+    (armoire.getCasierCase(0 , 7)).print();
 
     return 0;
 }
