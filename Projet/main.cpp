@@ -1,4 +1,4 @@
-#include "Armoire.cpp"
+#include "Armoire.hpp"
 #include <iostream>
 
 int main()

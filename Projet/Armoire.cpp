@@ -11,7 +11,7 @@ Casier::Casier(std::string emotionVal, std::string intensiteVal, std::string obj
 std::string Casier::getObjet() const { return objet; }
 
 void Casier::print() const {
-    std::cout << emotion << " / " << intensite << " / " << objet;
+    std::cout << emotion << " / " << intensite << " / " << objet << std::endl;
 }
 
 Armoire::Armoire(const char* fn) {
