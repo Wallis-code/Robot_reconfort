@@ -22,7 +22,7 @@ Armoire::Armoire(const char* fn) {
     }
     casier_depart.setX(data["casier_depart"][0]);
     casier_depart.setY(data["casier_depart"][1]);
-
+    selecteur = casier_depart;
     for (auto& c : data["casiers"]) {
         int l = c.value("ligne", -1);
         int col = c.value("colonne", -1);
@@ -62,4 +62,16 @@ void Armoire::printCasiers() const {
         }
         std::cout << std::endl;
     }
+}
+
+bool Armoire::chercher(Direction dir){
+    if (dir == N && selecteur.getX() == 0) return false;
+    if (dir == S && selecteur.getX() == 2) return false;
+    selecteur.deplacement(dir);
+    selecteur.setY((selecteur.getY() + 8) % 8);
+    return true;
+}
+
+std::string Armoire::contenuCasierCourant() const {
+    return casiers[selecteur.getX()][selecteur.getY()].getObjet();
 }

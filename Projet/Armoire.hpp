@@ -18,6 +18,7 @@ class Armoire : public JsonOpenerAbstract {
 protected:
     json data;
     Position casier_depart;
+    Position selecteur;
     Casier casiers[3][8];
 public:
     Armoire() {}
@@ -27,4 +28,6 @@ public:
     Position getCasier_depart();
     Casier getCasierCase(int ligne, int colonne) const;
     void printCasiers() const;
+    bool chercher(Direction dir);
+    std::string contenuCasierCourant() const;
 };
