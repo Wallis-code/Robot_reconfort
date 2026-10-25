@@ -1,11 +1,12 @@
 #pragma once
 #include <iostream>
 #include "Position.hpp"
+#include "Case.hpp"
 #include <vector>
 
 class Grille {
 protected:    
-    std::vector<std::string> cases;
+    std::vector<std::vector<std::shared_ptr<Case>>> cases; // shared ptr pour pouvoir copier/modifier les cases facilement
     int dimensions[2];
     
 public:        
@@ -55,12 +56,25 @@ public:
 
         dimensions[0] = hauteur;
         dimensions[1] = largeur;
-        cases = std::move(lignes);
+
+        cases.resize(hauteur);
+        for (int i = 0; i < hauteur; ++i) {
+            for (int j = 0; j < largeur; ++j) {
+                cases[i].push_back(creerCase(lignes[i][j]));
+    }
+}
     }
     
     //getter setter
-    char getCase(Position pos) const { return cases[pos.getX()][pos.getY()];}
-    void setY(Position pos, char symbole){ cases[pos.getX()][pos.getY()] = symbole;}
+    const Case& getCase(Position pos) const { 
+        return *cases[pos.getX()][pos.getY()]; 
+    }
+    char getSymboleCase(Position pos) const { 
+        return cases[pos.getX()][pos.getY()]->getSymbole(); 
+    }
+    void setY(Position pos, char symbole) { 
+        cases[pos.getX()][pos.getY()] = creerCase(symbole); 
+    }
     int getHauteur() const { return dimensions[0]; }
     int getLargeur() const { return dimensions[1]; }
 
