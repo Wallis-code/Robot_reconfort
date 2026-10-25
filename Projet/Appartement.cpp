@@ -7,7 +7,6 @@
 class Appartement : public JsonOpenerAbstract{
 protected:
     json data;
-    int dimensions[2];
     Grille grille;
 
 public:
@@ -17,7 +16,10 @@ public:
             std::cerr << "Format ou version de la carte appartement incorrect" << std::endl;
             return;
         }
+
+        grille = Grille(data);
     }
 
     json getData(){return data;}
+    Grille getGrille(){return grille;}
 };

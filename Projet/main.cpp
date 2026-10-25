@@ -3,9 +3,7 @@
 
 int main(){
     Appartement appart("cartes/appartement_01.json");
-    std::string gril = appart.getData()["dimensions"].dump();
-    int index = gril.find("hautekr");
-
-    std::cout << gril.substr(index, 7).compare("hauteur") << std::endl; 
+    Grille grille = appart.getGrille();
+    std::cout << "Dimensions de l'appartement : " << grille.getHauteur() << " x " << grille.getLargeur() << std::endl;
     return 0;
 }
