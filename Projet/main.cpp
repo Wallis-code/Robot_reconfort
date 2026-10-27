@@ -1,10 +1,14 @@
 #include "Appartement.cpp"
 #include "Armoire.hpp"
 #include "Candidat.hpp"
+#include "Demande.hpp"
 #include <iostream>
 
 int main()
 {
+    Demande demande(1, "ID123", "Élève très âgé");
+    std::cout << "Demande : " << demande.getNumero() << ", " << demande.getIdRes() << ", " << demande.getMessage() << std::endl;
+
     Armoire armoire("donnees/armoire_standard.json");
     json data = armoire.getData();    
     
