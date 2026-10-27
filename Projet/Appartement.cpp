@@ -1,4 +1,4 @@
-#include "JsonOpenerAbstract.cpp"
+#include "JsonOpenerAbstract.hpp"
 #include "Grille.hpp"
 #include <fstream>
 #include <iostream>

@@ -2,7 +2,7 @@
 #include <iostream>
 
 //Nord, Sud, Est, Ouest (west en anglais)
-enum Direction { N, S, E, W };
+enum Direction { N, S, E, O };
 
 class Position {
 private:    
@@ -24,18 +24,10 @@ public:
 
     void deplacement(Direction d){
         switch(d){
-            case N:
-                y += 1;
-                break;
-            case S:
-                y -= 1;
-                break;
-            case E:
-                x += 1;
-                break;
-            case W:
-                x -= 1;
-                break;
+            case N: x -= 1; break;
+            case S: x += 1; break;
+            case E: y += 1; break;
+            case O: y -= 1; break;
             default:
                 break;
         }
