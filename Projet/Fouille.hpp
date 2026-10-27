@@ -39,6 +39,7 @@ struct Fouille {
     std::vector<std::string> contenusVus;   
 };
 
+//parceque la trace va attendre un string 
 inline std::string repliEnTexte(Repli r) {
     switch (r) {
         case AUCUN:     return "aucun";
