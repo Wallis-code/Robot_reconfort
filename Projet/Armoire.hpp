@@ -30,4 +30,5 @@ public:
     void printCasiers() const;
     bool chercher(Direction dir);
     std::string contenuCasierCourant() const;
+    std::vector<Direction> itineraire(Position depart, Position arrivee);
 };

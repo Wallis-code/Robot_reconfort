@@ -38,7 +38,7 @@ inline bool passeAvant(const Candidat& a, const Candidat& b) {
 //un objet, peut etre qu'à cet emplacement l'armoire est vide,
 //d'ou l'idée d'avoir une liste
 // si candidat[0] n'existe pas, on prends le [1] etc
-inline std::vector<Candidat> candidats(int emotion, int intensite) {
+inline std::vector<Candidat> candidats(int intensite, int emotion) {
     std::vector<Candidat> liste;
     int decalages[5] = {0, 1, -1, 2, -2};
     //MAX, voir le commentaire au début avec les émotions,

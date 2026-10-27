@@ -75,3 +75,28 @@ bool Armoire::chercher(Direction dir){
 std::string Armoire::contenuCasierCourant() const {
     return casiers[selecteur.getX()][selecteur.getY()].getObjet();
 }
+
+//pour l'algo je vais aller au plus simple, d'abord on se mets au bon endroit en hauteur
+//après on gère la largeur,  avec un test pour savoir 
+//si on va a droite ou a gauche (car 7+1 renvoie à 0)
+
+/* RAPPEL
+enum Direction { N, S, E, O };
+
+class Position {
+private:    
+    int x;
+    int y;
+
+            CASE N: x -= 1; break;
+            case S: x += 1; break;
+            case E: y += 1; break;
+            case O: y -= 1; break;
+
+*/
+/*
+std::vector<Direction> Armoire::itineraire(Position depart, Position arrivee){
+    
+    return;
+}
+    */
