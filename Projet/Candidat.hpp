@@ -11,12 +11,21 @@
             4 tristesse
 */
 
+// Un casier que le robot pourrait choisir pour répondre à une demande,
+// avec ce qu'il faut pour le classer dans l'ordre de priorité (section 6.2).
 struct Candidat {
-    int ligne;
-    int colonne;
-    int distance;
-    int ecart;
-    bool horaire;
+    // Position du casier dans l'armoire : [ligne, colonne]
+    int ligne;      // intensité du casier : 0 faible, 1 moyenne, 2 forte
+    int colonne;    // émotion du casier : 0 joie ... 7 anticipation (ordre de la roue)
+
+    // Critères de tri, comparés à la demande (intensité, émotion)
+    int distance;   // écart entre l'émotion du casier et celle demandée, sur la roue (0, 1 ou 2)
+    int ecart;      // écart entre l'intensité du casier et celle demandée (0, 1 ou 2)
+                    //   = |ligne - intensité demandée|
+                    // c'est la distance des intensités
+    bool horaire;   // true si le casier est du côté des indices croissants sur la roue
+                    //   (ou sur la même émotion) ; sert à départager deux casiers
+                    //   à égalité : le sens horaire passe en premier
 };
 
 inline int distanceRoue(int e1, int e2) {
