@@ -26,6 +26,7 @@ public:
 
     json getData();
     Position getCasier_depart();
+    Position getSelecteur();
     Casier getCasierCase(int ligne, int colonne) const;
     void printCasiers() const;
     bool chercher(Direction dir);

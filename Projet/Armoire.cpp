@@ -40,6 +40,9 @@ json Armoire::getData() { return data; }
 
 Position Armoire::getCasier_depart() { return casier_depart; }
 
+Position Armoire::getSelecteur() { return selecteur; }
+
+
 Casier Armoire::getCasierCase(int ligne, int colonne) const {
     return casiers[ligne][colonne];
 }
@@ -75,3 +78,4 @@ bool Armoire::chercher(Direction dir){
 std::string Armoire::contenuCasierCourant() const {
     return casiers[selecteur.getX()][selecteur.getY()].getObjet();
 }
+
