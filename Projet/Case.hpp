@@ -54,6 +54,12 @@ public:
     void interagir() const override {}
 };
 
+class CaseInconnue : public Case {
+public:
+    CaseInconnue() : Case('?', true) {} // On part du principe que la case inconnue est traversable
+    void interagir() const override {}
+};
+
 // Factory (convertir un char du JSON en objet Case)
 inline std::shared_ptr<Case> creerCase(char c) {
     switch (c) {
@@ -63,6 +69,7 @@ inline std::shared_ptr<Case> creerCase(char c) {
         case 'A': return std::make_shared<CaseArmoire>();
         case 'D': return std::make_shared<CaseDictionnaire>();
         case 'P': return std::make_shared<CaseResident>();
+        case '?': return std::make_shared<CaseInconnue>();
         default: throw std::invalid_argument("Symbole de case inconnu");
     }
 }
