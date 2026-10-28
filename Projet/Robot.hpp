@@ -102,6 +102,8 @@ public:
     // TODO
     void prendre(){
         //objetEnMain = armoire.prendre();
+        // temp:
+        objetEnMain = "objet";
     }
 
     void choixAction(){

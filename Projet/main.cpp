@@ -38,10 +38,10 @@ int main()
 
     Robot robot(grille, demandes, dictionnaire, armoire);
     robot.getGrille().afficher();
-    robot.updateGrille();
-    robot.avancer(N);
-    robot.avancer(E);
-    robot.getGrille().afficher();
+    while(robot.getNumeroDemandeCourante() <= demandes.size()){
+        robot.choixAction();
+        robot.getGrille().afficher();
+    }
 
     return 0;
 }
