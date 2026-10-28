@@ -60,9 +60,38 @@ public:
         cases.resize(hauteur);
         for (int i = 0; i < hauteur; ++i) {
             for (int j = 0; j < largeur; ++j) {
-                cases[i].push_back(creerCase(lignes[i][j]));
+                cases[i].push_back(creerCase(lignes[i][j], Position(i, j)));
+            }
+        }
+
+        if (data.contains("residents") && data["residents"].is_array()) {
+            for (const auto& resident : data["residents"]) {
+                if (!resident.contains("position") || !resident["position"].is_array()) {
+                    continue;
+                }
+
+                const auto& posJson = resident["position"];
+                const Position pos(posJson[0].get<int>(), posJson[1].get<int>());
+
+                if (pos.getX() >= 0 && pos.getX() < hauteur &&
+                    pos.getY() >= 0 && pos.getY() < largeur) {
+                    cases[pos.getX()][pos.getY()] = std::make_shared<CaseResident>(
+                        resident["id"].get<std::string>(),
+                        resident["nom"].get<std::string>(),
+                        pos
+                    );
+                }
+            }
+        }
     }
-}
+
+    void afficher() const {
+        for (const auto& ligne : cases) {
+            for (const auto& casePtr : ligne) {
+                std::cout << casePtr->getSymbole();
+            }
+            std::cout << std::endl;
+        }
     }
     
     //getter setter
@@ -72,10 +101,67 @@ public:
     char getSymboleCase(Position pos) const { 
         return cases[pos.getX()][pos.getY()]->getSymbole(); 
     }
+    void setCase(const Position& pos, const std::shared_ptr<Case>& nouvelleCase) {
+        cases[pos.getX()][pos.getY()] = nouvelleCase;
+    }
     void setY(Position pos, char symbole) { 
         cases[pos.getX()][pos.getY()] = creerCase(symbole); 
     }
     int getHauteur() const { return dimensions[0]; }
     int getLargeur() const { return dimensions[1]; }
+
+
+    // Plus propre : a refaire en une seule fonction
+
+    Position getPositionDepart() const {
+        for (int i = 0; i < dimensions[0]; ++i) {
+            for (int j = 0; j < dimensions[1]; ++j) {
+                const auto& objet = cases[i][j];
+                if (objet && objet->getSymbole() == 'R') {
+                    return Position(i, j);
+                }
+            }
+        }
+        return Position();
+    }
+
+    Position getPositionArmoire() const {
+        for (int i = 0; i < dimensions[0]; ++i) {
+            for (int j = 0; j < dimensions[1]; ++j) {
+                const auto& objet = cases[i][j];
+                if (objet && objet->getSymbole() == 'A') {
+                    return Position(i, j);
+                }
+            }
+        }
+        return Position();
+    }
+
+    Position getPositionDictionnaire() const {
+        for (int i = 0; i < dimensions[0]; ++i) {
+            for (int j = 0; j < dimensions[1]; ++j) {
+                const auto& objet = cases[i][j];
+                if (objet && objet->getSymbole() == 'D') {
+                    return Position(i, j);
+                }
+            }
+        }
+        return Position();
+    }
+
+    Position getPositionResident(const std::string& id) const {
+        for (int i = 0; i < dimensions[0]; ++i) {
+            for (int j = 0; j < dimensions[1]; ++j) {
+                const auto& objet = cases[i][j];
+                if (objet && objet->getSymbole() == 'P') {
+                    const auto resident = std::dynamic_pointer_cast<const CaseResident>(objet);
+                    if (resident && resident->getId() == id) {
+                        return Position(i, j);
+                    }
+                }
+            }
+        }
+        return Position();
+    }
 
 };

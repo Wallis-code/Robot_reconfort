@@ -4,6 +4,7 @@
 #include "Demande.hpp"
 #include "Dictionnaire.hpp"
 #include "Scenario.hpp"
+#include "Robot.hpp"
 #include <iostream>
 
 int main()
@@ -32,7 +33,11 @@ int main()
     // Test appartement    
     Appartement appart("cartes/appartement_01.json");
     Grille grille = appart.getGrille();
+    grille.afficher();
     std::cout << "Dimensions de l'appartement : " << grille.getHauteur() << " x " << grille.getLargeur() << std::endl;
+
+    Robot robot(grille);
+    robot.getGrille().afficher();
 
     return 0;
 }

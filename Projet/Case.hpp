@@ -1,5 +1,10 @@
 #pragma once
 
+#include <memory>
+#include <string>
+
+#include "Position.hpp"
+
 class Case {
 protected:
     char symbole;
@@ -31,26 +36,51 @@ public:
 };
 
 class CaseDepart : public Case {
+private:
+    Position position;
+
 public:
-    CaseDepart() : Case('R', true) {}
+    CaseDepart(const Position& pos = Position()) : Case('R', true), position(pos) {}
+
+    const Position& getPosition() const { return position; }
     void interagir() const override {}
 };
 
 class CaseArmoire : public Case {
+private:
+    Position position;
+
 public:
-    CaseArmoire() : Case('A', false) {}
+    CaseArmoire(const Position& pos = Position()) : Case('A', false), position(pos) {}
+
+    const Position& getPosition() const { return position; }
     void interagir() const override {}
 };
 
 class CaseDictionnaire : public Case {
+private:
+    Position position;
+
 public:
-    CaseDictionnaire() : Case('D', false) {}
+    CaseDictionnaire(const Position& pos = Position()) : Case('D', false), position(pos) {}
+
+    const Position& getPosition() const { return position; }
     void interagir() const override {}
 };
 
 class CaseResident : public Case {
+private:
+    std::string id;
+    std::string nom;
+    Position position;
+
 public:
-    CaseResident() : Case('P', false) {}
+    CaseResident(const std::string& idVal = "", const std::string& nomVal = "", const Position& pos = Position())
+        : Case('P', false), id(idVal), nom(nomVal), position(pos) {}
+
+    const std::string& getId() const { return id; }
+    const std::string& getNom() const { return nom; }
+    const Position& getPosition() const { return position; }
     void interagir() const override {}
 };
 
@@ -61,14 +91,15 @@ public:
 };
 
 // Factory (convertir un char du JSON en objet Case)
-inline std::shared_ptr<Case> creerCase(char c) {
+inline std::shared_ptr<Case> creerCase(char c, const Position& pos = Position(),
+                                      const std::string& id = "", const std::string& nom = "") {
     switch (c) {
         case '#': return std::make_shared<CaseMur>();
         case '.': return std::make_shared<CaseLibre>();
-        case 'R': return std::make_shared<CaseDepart>();
-        case 'A': return std::make_shared<CaseArmoire>();
-        case 'D': return std::make_shared<CaseDictionnaire>();
-        case 'P': return std::make_shared<CaseResident>();
+        case 'R': return std::make_shared<CaseDepart>(pos);
+        case 'A': return std::make_shared<CaseArmoire>(pos);
+        case 'D': return std::make_shared<CaseDictionnaire>(pos);
+        case 'P': return std::make_shared<CaseResident>(id, nom, pos);
         case '?': return std::make_shared<CaseInconnue>();
         default: throw std::invalid_argument("Symbole de case inconnu");
     }
