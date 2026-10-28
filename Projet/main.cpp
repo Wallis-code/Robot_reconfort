@@ -3,6 +3,7 @@
 #include "Candidat.hpp"
 #include "Demande.hpp"
 #include "Dictionnaire.hpp"
+#include "Scenario.hpp"
 #include <iostream>
 
 int main()
@@ -14,6 +15,13 @@ int main()
 
     std::pair<std::string, std::string> resultat = dictionnaire.consulter(demande.getMessage());
     std::cout << "Résultat : " << resultat.first << ", " << resultat.second << std::endl;
+    
+    Scenario scenario("cartes/scenario_01.json");
+
+    const std::vector<Demande>& demandes = scenario.getDemandes();
+    for (const Demande& d : demandes) {
+        std::cout << "Demande : " << d.getNumero() << ", " << d.getIdRes() << ", " << d.getMessage() << std::endl;
+    }
 
     Armoire armoire("donnees/armoire_standard.json");
     json data = armoire.getData();    
