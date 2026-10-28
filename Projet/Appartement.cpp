@@ -21,5 +21,5 @@ public:
     }
 
     json getData(){return data;}
-    Grille getGrille(){return grille;}
+    const Grille& getGrille() const { return grille; }
 };

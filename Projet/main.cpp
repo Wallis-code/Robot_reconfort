@@ -38,6 +38,10 @@ int main()
 
     Robot robot(grille);
     robot.getGrille().afficher();
+    robot.updateGrille();
+    robot.avancer(N);
+    robot.avancer(E);
+    robot.getGrille().afficher();
 
     return 0;
 }

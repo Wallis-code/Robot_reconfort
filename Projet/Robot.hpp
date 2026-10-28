@@ -4,21 +4,25 @@
 
 #include "Grille.hpp"
 #include "Position.hpp"
+#include "Parcours.hpp"
 
 class Robot {
 private:
     Position position;
     Grille grille;
+    const Grille* grilleComplete;
     std::string objetEnMain;
     int numeroDemandeCourante;
     int dimensions[2];
 
 public:
-    Robot() : position(), grille(), objetEnMain(""), numeroDemandeCourante(0) {}
+    Robot() : position(), grille(), grilleComplete(nullptr), objetEnMain(""), numeroDemandeCourante(0) {
+        dimensions[0] = 0;
+        dimensions[1] = 0;
+    }
 
     Robot(const Grille& grilleVal, const std::string& objetVal = "", int numeroDemandeVal = 0)
-        : objetEnMain(objetVal), numeroDemandeCourante(numeroDemandeVal) {
-        grille = grilleVal;
+        : grille(grilleVal), grilleComplete(&grilleVal), objetEnMain(objetVal), numeroDemandeCourante(numeroDemandeVal) {
         dimensions[0] = grille.getHauteur();
         dimensions[1] = grille.getLargeur();
 
@@ -36,6 +40,23 @@ public:
         }
 
         position = grille.getPositionDepart();
+    }
+
+    void updateGrille(){
+        std::vector<Position> casesAdj = voisins(position);
+        for (const Position& v : casesAdj) {
+            const char symboleConnu = grilleComplete->getSymboleCase(v);
+            const char symboleVision = grille.getSymboleCase(v);
+
+            if (symboleVision == '?' && symboleConnu != '?') {
+                grille.setCase(v, creerCase(symboleConnu, v));
+            }
+        }
+    }
+
+    void avancer(Direction dir){
+        position.deplacement(dir);
+        updateGrille();
     }
 
     const Position& getPosition() const { return position; }
