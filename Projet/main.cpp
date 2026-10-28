@@ -36,7 +36,7 @@ int main()
     grille.afficher();
     std::cout << "Dimensions de l'appartement : " << grille.getHauteur() << " x " << grille.getLargeur() << std::endl;
 
-    Robot robot(grille);
+    Robot robot(grille, demandes, dictionnaire, armoire);
     robot.getGrille().afficher();
     robot.updateGrille();
     robot.avancer(N);

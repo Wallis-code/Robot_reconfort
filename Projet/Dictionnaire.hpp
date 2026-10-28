@@ -10,6 +10,7 @@ private:
 	json data;
 
 public:
+	Dictionnaire() = default;
 	Dictionnaire(const char* fileName);
 
 	std::pair<std::string, std::string> consulter(const std::string& phrase) const;
