@@ -113,7 +113,7 @@ inline void ecrireTrace(const Trace& trace, const std::string& chemin) {
     data["scenario"] = trace.scenario;
     data["equipe"] = trace.equipe;
  
-    // un objet par action
+    //cette ligne signifie qu'on va créer une liste dans le Json
     data["pas"] = json::array();
     for (const Pas& p : trace.pas)
         data["pas"].push_back(pasJson(p));
