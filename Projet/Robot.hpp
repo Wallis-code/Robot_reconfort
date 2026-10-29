@@ -27,6 +27,16 @@ private:
 
     Armoire armoire;
 
+
+    //Fouille de l'armoire
+    Fouille fouilleCourante;       // le résultat de la fouille pour la demande en cours
+    //combien d'action de CHERCHER deja fait
+    //quand la fouille va nous donner le chemin de S S N E O ...
+    //on va déplacer cet entier pour faire bouger le selecteur
+    //donc remis à 0 à chaque demande
+    int prochainChercher = 0;
+
+
     static Direction directionEntre(const Position& depart, const Position& arrivee) {
         if (arrivee.getX() < depart.getX()) return N;
         if (arrivee.getX() > depart.getX()) return S;
@@ -38,6 +48,15 @@ private:
         if (cheminActuel.size() >= 2) {
             avancer(directionEntre(cheminActuel[0], cheminActuel[1]));
         }
+    }
+
+    //fouille re
+
+    // "tristesse" -> 4, "moyenne" -> 1
+    int indiceDans(const json& liste, const std::string& valeur) {
+        for (int i = 0; i < (int)liste.size(); i++)
+            if (liste[i] == valeur) return i;
+        return -1;
     }
 
 public:
@@ -92,6 +111,8 @@ public:
 
     void donner(){
         objetEnMain.clear();
+        emotionCourante = {"", ""};
+        prochainChercher = 0;
         numeroDemandeCourante++;
     }
 
@@ -99,12 +120,34 @@ public:
         emotionCourante = dictionnaire.consulter(demandes[numeroDemandeCourante - 1].getMessage());
     }
 
-    // TODO
     void prendre(){
-        //objetEnMain = armoire.prendre();
-        // temp:
-        objetEnMain = "objet";
+        // 1er tour devant l'armoire
+        if (prochainChercher == 0) {
+            json data = armoire.getData();
+            int emotion   = indiceDans(data["emotions"], emotionCourante.first);
+            int intensite = indiceDans(data["intensites"],emotionCourante.second);
+            //cote selecteur, tout se fait ici,
+            fouilleCourante = fouiller(armoire, intensite,emotion);
+        }
+
+        // tant qu'il reste des CHERCHER : on en joue un par tour
+        if (prochainChercher < (int)fouilleCourante.mouvements.size()) {
+            prochainChercher++;
+            return;
+        }
+
+        // tous les CHERCHER sont faits
+        if (fouilleCourante.succes) {
+            objetEnMain = fouilleCourante.objet;   // PRENDRE : le robot tient l'objet
+            prochainChercher = 0;
+        } else {                    //Armoire vide
+            objetEnMain.clear();
+            emotionCourante = {"", ""};
+            prochainChercher = 0;
+            numeroDemandeCourante++;              
+        }
     }
+    
 
     void choixAction(){
         bool tientObjet = !objetEnMain.empty();
