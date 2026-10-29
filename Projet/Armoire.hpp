@@ -24,7 +24,7 @@ public:
     Armoire() {}
     Armoire(const char* fn);
 
-    json getData();
+    const json& getData() const;
     Position getCasier_depart();
     Position getSelecteur();
     Casier getCasierCase(int ligne, int colonne) const;

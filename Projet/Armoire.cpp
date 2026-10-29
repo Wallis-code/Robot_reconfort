@@ -36,7 +36,7 @@ Armoire::Armoire(const char* fn) {
     }
 }
 
-json Armoire::getData() { return data; }
+const json& Armoire::getData() const { return data; }
 
 Position Armoire::getCasier_depart() { return casier_depart; }
 

@@ -13,5 +13,6 @@ private:
 public:
 	Scenario(const char* fileName);
 
+	const json& getData() const { return data; }
 	const std::vector<Demande>& getDemandes() const;
 };

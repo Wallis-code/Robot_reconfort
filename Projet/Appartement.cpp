@@ -20,6 +20,6 @@ public:
         grille = Grille(data);
     }
 
-    json getData(){return data;}
+    const json& getData() const {return data;}
     const Grille& getGrille() const { return grille; }
 };

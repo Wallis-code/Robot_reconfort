@@ -13,5 +13,6 @@ public:
 	Dictionnaire() = default;
 	Dictionnaire(const char* fileName);
 
+	const json& getData() const { return data; }
 	std::pair<std::string, std::string> consulter(const std::string& phrase) const;
 };
