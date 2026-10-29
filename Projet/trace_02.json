@@ -1,0 +1,5133 @@
+{
+  "carte": "appartement_02",
+  "equipe": [
+    "MOREAU Wallis",
+    "Sebastien"
+  ],
+  "format": "robot-reconfort/trace",
+  "livraisons": [
+    {
+      "casier_choisi": [
+        2,
+        2
+      ],
+      "demande": 1,
+      "emotion": "peur",
+      "intensite": "forte",
+      "motif_echec": null,
+      "objet": "bouton d appel",
+      "pas_utilises": 57,
+      "repli": "aucun",
+      "resident": "R1",
+      "succes": true
+    },
+    {
+      "casier_choisi": [
+        1,
+        7
+      ],
+      "demande": 2,
+      "emotion": "anticipation",
+      "intensite": "moyenne",
+      "motif_echec": null,
+      "objet": "calendrier",
+      "pas_utilises": 51,
+      "repli": "aucun",
+      "resident": "R2",
+      "succes": true
+    },
+    {
+      "casier_choisi": [
+        1,
+        5
+      ],
+      "demande": 3,
+      "emotion": "degout",
+      "intensite": "moyenne",
+      "motif_echec": null,
+      "objet": "desodorisant",
+      "pas_utilises": 43,
+      "repli": "aucun",
+      "resident": "R3",
+      "succes": true
+    },
+    {
+      "casier_choisi": [
+        0,
+        4
+      ],
+      "demande": 4,
+      "emotion": "tristesse",
+      "intensite": "faible",
+      "motif_echec": null,
+      "objet": "mouchoirs",
+      "pas_utilises": 31,
+      "repli": "aucun",
+      "resident": "R1",
+      "succes": true
+    },
+    {
+      "casier_choisi": [
+        1,
+        1
+      ],
+      "demande": 5,
+      "emotion": "confiance",
+      "intensite": "moyenne",
+      "motif_echec": null,
+      "objet": "plaid",
+      "pas_utilises": 47,
+      "repli": "aucun",
+      "resident": "R2",
+      "succes": true
+    }
+  ],
+  "pas": [
+    {
+      "action": "AVANCER",
+      "argument": "N",
+      "casier": [
+        1,
+        0
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 1,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        8,
+        12
+      ],
+      "t": 0
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        1,
+        0
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 1,
+      "perception": {
+        "E": "libre",
+        "N": "mur",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        7,
+        12
+      ],
+      "t": 1
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        1,
+        0
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 1,
+      "perception": {
+        "E": "libre",
+        "N": "mur",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        7,
+        11
+      ],
+      "t": 2
+    },
+    {
+      "action": "AVANCER",
+      "argument": "S",
+      "casier": [
+        1,
+        0
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 1,
+      "perception": {
+        "E": "libre",
+        "N": "mur",
+        "O": "mur",
+        "S": "libre"
+      },
+      "position": [
+        7,
+        10
+      ],
+      "t": 3
+    },
+    {
+      "action": "AVANCER",
+      "argument": "S",
+      "casier": [
+        1,
+        0
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 1,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "mur",
+        "S": "libre"
+      },
+      "position": [
+        8,
+        10
+      ],
+      "t": 4
+    },
+    {
+      "action": "AVANCER",
+      "argument": "N",
+      "casier": [
+        1,
+        0
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 1,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "mur",
+        "S": "mur"
+      },
+      "position": [
+        9,
+        10
+      ],
+      "t": 5
+    },
+    {
+      "action": "AVANCER",
+      "argument": "N",
+      "casier": [
+        1,
+        0
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 1,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "mur",
+        "S": "libre"
+      },
+      "position": [
+        8,
+        10
+      ],
+      "t": 6
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        1,
+        0
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 1,
+      "perception": {
+        "E": "libre",
+        "N": "mur",
+        "O": "mur",
+        "S": "libre"
+      },
+      "position": [
+        7,
+        10
+      ],
+      "t": 7
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        1,
+        0
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 1,
+      "perception": {
+        "E": "libre",
+        "N": "mur",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        7,
+        11
+      ],
+      "t": 8
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        1,
+        0
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 1,
+      "perception": {
+        "E": "libre",
+        "N": "mur",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        7,
+        12
+      ],
+      "t": 9
+    },
+    {
+      "action": "AVANCER",
+      "argument": "N",
+      "casier": [
+        1,
+        0
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 1,
+      "perception": {
+        "E": "mur",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        7,
+        13
+      ],
+      "t": 10
+    },
+    {
+      "action": "AVANCER",
+      "argument": "N",
+      "casier": [
+        1,
+        0
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 1,
+      "perception": {
+        "E": "mur",
+        "N": "libre",
+        "O": "mur",
+        "S": "libre"
+      },
+      "position": [
+        6,
+        13
+      ],
+      "t": 11
+    },
+    {
+      "action": "AVANCER",
+      "argument": "N",
+      "casier": [
+        1,
+        0
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 1,
+      "perception": {
+        "E": "mur",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        5,
+        13
+      ],
+      "t": 12
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        1,
+        0
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 1,
+      "perception": {
+        "E": "mur",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        4,
+        13
+      ],
+      "t": 13
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        1,
+        0
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 1,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        4,
+        12
+      ],
+      "t": 14
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        1,
+        0
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 1,
+      "perception": {
+        "E": "libre",
+        "N": "resident",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        4,
+        11
+      ],
+      "t": 15
+    },
+    {
+      "action": "AVANCER",
+      "argument": "N",
+      "casier": [
+        1,
+        0
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 1,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "mur",
+        "S": "libre"
+      },
+      "position": [
+        4,
+        10
+      ],
+      "t": 16
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        1,
+        0
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 1,
+      "perception": {
+        "E": "resident",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        3,
+        10
+      ],
+      "t": 17
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        1,
+        0
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 1,
+      "perception": {
+        "E": "libre",
+        "N": "mur",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        3,
+        9
+      ],
+      "t": 18
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        1,
+        0
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 1,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        3,
+        8
+      ],
+      "t": 19
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        1,
+        0
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 1,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        3,
+        7
+      ],
+      "t": 20
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        1,
+        0
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 1,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        3,
+        6
+      ],
+      "t": 21
+    },
+    {
+      "action": "AVANCER",
+      "argument": "N",
+      "casier": [
+        1,
+        0
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 1,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "mur",
+        "S": "libre"
+      },
+      "position": [
+        3,
+        5
+      ],
+      "t": 22
+    },
+    {
+      "action": "AVANCER",
+      "argument": "N",
+      "casier": [
+        1,
+        0
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 1,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "mur",
+        "S": "libre"
+      },
+      "position": [
+        2,
+        5
+      ],
+      "t": 23
+    },
+    {
+      "action": "AVANCER",
+      "argument": "S",
+      "casier": [
+        1,
+        0
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 1,
+      "perception": {
+        "E": "libre",
+        "N": "mur",
+        "O": "mur",
+        "S": "libre"
+      },
+      "position": [
+        1,
+        5
+      ],
+      "t": 24
+    },
+    {
+      "action": "AVANCER",
+      "argument": "S",
+      "casier": [
+        1,
+        0
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 1,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "mur",
+        "S": "libre"
+      },
+      "position": [
+        2,
+        5
+      ],
+      "t": 25
+    },
+    {
+      "action": "AVANCER",
+      "argument": "S",
+      "casier": [
+        1,
+        0
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 1,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "mur",
+        "S": "libre"
+      },
+      "position": [
+        3,
+        5
+      ],
+      "t": 26
+    },
+    {
+      "action": "AVANCER",
+      "argument": "S",
+      "casier": [
+        1,
+        0
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 1,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "mur",
+        "S": "libre"
+      },
+      "position": [
+        4,
+        5
+      ],
+      "t": 27
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        1,
+        0
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 1,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        5,
+        5
+      ],
+      "t": 28
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        1,
+        0
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 1,
+      "perception": {
+        "E": "libre",
+        "N": "mur",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        5,
+        4
+      ],
+      "t": 29
+    },
+    {
+      "action": "AVANCER",
+      "argument": "N",
+      "casier": [
+        1,
+        0
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 1,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        5,
+        3
+      ],
+      "t": 30
+    },
+    {
+      "action": "CONSULTER",
+      "argument": null,
+      "casier": [
+        1,
+        0
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 1,
+      "perception": {
+        "E": "mur",
+        "N": "dictionnaire",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        4,
+        3
+      ],
+      "t": 31
+    },
+    {
+      "action": "AVANCER",
+      "argument": "S",
+      "casier": [
+        1,
+        0
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 1,
+      "perception": {
+        "E": "mur",
+        "N": "dictionnaire",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        4,
+        3
+      ],
+      "t": 32
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        1,
+        0
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 1,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        5,
+        3
+      ],
+      "t": 33
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        1,
+        0
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 1,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        5,
+        2
+      ],
+      "t": 34
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        1,
+        0
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 1,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "mur",
+        "S": "mur"
+      },
+      "position": [
+        5,
+        1
+      ],
+      "t": 35
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        1,
+        0
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 1,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        5,
+        2
+      ],
+      "t": 36
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        1,
+        0
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 1,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        5,
+        3
+      ],
+      "t": 37
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        1,
+        0
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 1,
+      "perception": {
+        "E": "libre",
+        "N": "mur",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        5,
+        4
+      ],
+      "t": 38
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        1,
+        0
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 1,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        5,
+        5
+      ],
+      "t": 39
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        1,
+        0
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 1,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        5,
+        6
+      ],
+      "t": 40
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        1,
+        0
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 1,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        5,
+        7
+      ],
+      "t": 41
+    },
+    {
+      "action": "AVANCER",
+      "argument": "S",
+      "casier": [
+        1,
+        0
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 1,
+      "perception": {
+        "E": "mur",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        5,
+        8
+      ],
+      "t": 42
+    },
+    {
+      "action": "AVANCER",
+      "argument": "S",
+      "casier": [
+        1,
+        0
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 1,
+      "perception": {
+        "E": "mur",
+        "N": "libre",
+        "O": "mur",
+        "S": "libre"
+      },
+      "position": [
+        6,
+        8
+      ],
+      "t": 43
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        1,
+        0
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 1,
+      "perception": {
+        "E": "mur",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        7,
+        8
+      ],
+      "t": 44
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        1,
+        0
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 1,
+      "perception": {
+        "E": "libre",
+        "N": "mur",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        7,
+        7
+      ],
+      "t": 45
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        1,
+        0
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 1,
+      "perception": {
+        "E": "libre",
+        "N": "mur",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        7,
+        6
+      ],
+      "t": 46
+    },
+    {
+      "action": "AVANCER",
+      "argument": "S",
+      "casier": [
+        1,
+        0
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 1,
+      "perception": {
+        "E": "libre",
+        "N": "mur",
+        "O": "mur",
+        "S": "libre"
+      },
+      "position": [
+        7,
+        5
+      ],
+      "t": 47
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        1,
+        0
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 1,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "resident"
+      },
+      "position": [
+        8,
+        5
+      ],
+      "t": 48
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        1,
+        0
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 1,
+      "perception": {
+        "E": "libre",
+        "N": "mur",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        8,
+        4
+      ],
+      "t": 49
+    },
+    {
+      "action": "CHERCHER",
+      "argument": "S",
+      "casier": [
+        1,
+        0
+      ],
+      "commentaire": null,
+      "contenu_casier": "photo de famille",
+      "demande": 1,
+      "perception": {
+        "E": "libre",
+        "N": "armoire",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        8,
+        3
+      ],
+      "t": 50
+    },
+    {
+      "action": "CHERCHER",
+      "argument": "E",
+      "casier": [
+        2,
+        0
+      ],
+      "commentaire": null,
+      "contenu_casier": "guirlande lumineuse",
+      "demande": 1,
+      "perception": {
+        "E": "libre",
+        "N": "armoire",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        8,
+        3
+      ],
+      "t": 51
+    },
+    {
+      "action": "CHERCHER",
+      "argument": "E",
+      "casier": [
+        2,
+        1
+      ],
+      "commentaire": null,
+      "contenu_casier": "album souvenir",
+      "demande": 1,
+      "perception": {
+        "E": "libre",
+        "N": "armoire",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        8,
+        3
+      ],
+      "t": 52
+    },
+    {
+      "action": "PRENDRE",
+      "argument": "bouton d appel",
+      "casier": [
+        2,
+        2
+      ],
+      "commentaire": null,
+      "contenu_casier": "bouton d appel",
+      "demande": 1,
+      "perception": {
+        "E": "libre",
+        "N": "armoire",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        8,
+        3
+      ],
+      "t": 53
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        2,
+        2
+      ],
+      "commentaire": null,
+      "contenu_casier": "bouton d appel",
+      "demande": 1,
+      "perception": {
+        "E": "libre",
+        "N": "armoire",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        8,
+        3
+      ],
+      "t": 54
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        2,
+        2
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 1,
+      "perception": {
+        "E": "libre",
+        "N": "mur",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        8,
+        4
+      ],
+      "t": 55
+    },
+    {
+      "action": "DONNER",
+      "argument": "bouton d appel",
+      "casier": [
+        2,
+        2
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 1,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "resident"
+      },
+      "position": [
+        8,
+        5
+      ],
+      "t": 56
+    },
+    {
+      "action": "AVANCER",
+      "argument": "N",
+      "casier": [
+        2,
+        2
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 2,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "resident"
+      },
+      "position": [
+        8,
+        5
+      ],
+      "t": 57
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        2,
+        2
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 2,
+      "perception": {
+        "E": "libre",
+        "N": "mur",
+        "O": "mur",
+        "S": "libre"
+      },
+      "position": [
+        7,
+        5
+      ],
+      "t": 58
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        2,
+        2
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 2,
+      "perception": {
+        "E": "libre",
+        "N": "mur",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        7,
+        6
+      ],
+      "t": 59
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        2,
+        2
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 2,
+      "perception": {
+        "E": "libre",
+        "N": "mur",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        7,
+        7
+      ],
+      "t": 60
+    },
+    {
+      "action": "AVANCER",
+      "argument": "N",
+      "casier": [
+        2,
+        2
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 2,
+      "perception": {
+        "E": "mur",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        7,
+        8
+      ],
+      "t": 61
+    },
+    {
+      "action": "AVANCER",
+      "argument": "N",
+      "casier": [
+        2,
+        2
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 2,
+      "perception": {
+        "E": "mur",
+        "N": "libre",
+        "O": "mur",
+        "S": "libre"
+      },
+      "position": [
+        6,
+        8
+      ],
+      "t": 62
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        2,
+        2
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 2,
+      "perception": {
+        "E": "mur",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        5,
+        8
+      ],
+      "t": 63
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        2,
+        2
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 2,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        5,
+        7
+      ],
+      "t": 64
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        2,
+        2
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 2,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        5,
+        6
+      ],
+      "t": 65
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        2,
+        2
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 2,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        5,
+        5
+      ],
+      "t": 66
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        2,
+        2
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 2,
+      "perception": {
+        "E": "libre",
+        "N": "mur",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        5,
+        4
+      ],
+      "t": 67
+    },
+    {
+      "action": "AVANCER",
+      "argument": "N",
+      "casier": [
+        2,
+        2
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 2,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        5,
+        3
+      ],
+      "t": 68
+    },
+    {
+      "action": "CONSULTER",
+      "argument": null,
+      "casier": [
+        2,
+        2
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 2,
+      "perception": {
+        "E": "mur",
+        "N": "dictionnaire",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        4,
+        3
+      ],
+      "t": 69
+    },
+    {
+      "action": "AVANCER",
+      "argument": "S",
+      "casier": [
+        2,
+        2
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 2,
+      "perception": {
+        "E": "mur",
+        "N": "dictionnaire",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        4,
+        3
+      ],
+      "t": 70
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        2,
+        2
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 2,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        5,
+        3
+      ],
+      "t": 71
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        2,
+        2
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 2,
+      "perception": {
+        "E": "libre",
+        "N": "mur",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        5,
+        4
+      ],
+      "t": 72
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        2,
+        2
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 2,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        5,
+        5
+      ],
+      "t": 73
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        2,
+        2
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 2,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        5,
+        6
+      ],
+      "t": 74
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        2,
+        2
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 2,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        5,
+        7
+      ],
+      "t": 75
+    },
+    {
+      "action": "AVANCER",
+      "argument": "S",
+      "casier": [
+        2,
+        2
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 2,
+      "perception": {
+        "E": "mur",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        5,
+        8
+      ],
+      "t": 76
+    },
+    {
+      "action": "AVANCER",
+      "argument": "S",
+      "casier": [
+        2,
+        2
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 2,
+      "perception": {
+        "E": "mur",
+        "N": "libre",
+        "O": "mur",
+        "S": "libre"
+      },
+      "position": [
+        6,
+        8
+      ],
+      "t": 77
+    },
+    {
+      "action": "AVANCER",
+      "argument": "S",
+      "casier": [
+        2,
+        2
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 2,
+      "perception": {
+        "E": "mur",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        7,
+        8
+      ],
+      "t": 78
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        2,
+        2
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 2,
+      "perception": {
+        "E": "mur",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        8,
+        8
+      ],
+      "t": 79
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        2,
+        2
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 2,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        8,
+        7
+      ],
+      "t": 80
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        2,
+        2
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 2,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        8,
+        6
+      ],
+      "t": 81
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        2,
+        2
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 2,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "resident"
+      },
+      "position": [
+        8,
+        5
+      ],
+      "t": 82
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        2,
+        2
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 2,
+      "perception": {
+        "E": "libre",
+        "N": "mur",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        8,
+        4
+      ],
+      "t": 83
+    },
+    {
+      "action": "CHERCHER",
+      "argument": "N",
+      "casier": [
+        2,
+        2
+      ],
+      "commentaire": null,
+      "contenu_casier": "bouton d appel",
+      "demande": 2,
+      "perception": {
+        "E": "libre",
+        "N": "armoire",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        8,
+        3
+      ],
+      "t": 84
+    },
+    {
+      "action": "CHERCHER",
+      "argument": "O",
+      "casier": [
+        1,
+        2
+      ],
+      "commentaire": null,
+      "contenu_casier": "lampe torche",
+      "demande": 2,
+      "perception": {
+        "E": "libre",
+        "N": "armoire",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        8,
+        3
+      ],
+      "t": 85
+    },
+    {
+      "action": "CHERCHER",
+      "argument": "O",
+      "casier": [
+        1,
+        1
+      ],
+      "commentaire": null,
+      "contenu_casier": "plaid",
+      "demande": 2,
+      "perception": {
+        "E": "libre",
+        "N": "armoire",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        8,
+        3
+      ],
+      "t": 86
+    },
+    {
+      "action": "CHERCHER",
+      "argument": "O",
+      "casier": [
+        1,
+        0
+      ],
+      "commentaire": null,
+      "contenu_casier": "photo de famille",
+      "demande": 2,
+      "perception": {
+        "E": "libre",
+        "N": "armoire",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        8,
+        3
+      ],
+      "t": 87
+    },
+    {
+      "action": "PRENDRE",
+      "argument": "calendrier",
+      "casier": [
+        1,
+        7
+      ],
+      "commentaire": null,
+      "contenu_casier": "calendrier",
+      "demande": 2,
+      "perception": {
+        "E": "libre",
+        "N": "armoire",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        8,
+        3
+      ],
+      "t": 88
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        1,
+        7
+      ],
+      "commentaire": null,
+      "contenu_casier": "calendrier",
+      "demande": 2,
+      "perception": {
+        "E": "libre",
+        "N": "armoire",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        8,
+        3
+      ],
+      "t": 89
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        1,
+        7
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 2,
+      "perception": {
+        "E": "libre",
+        "N": "mur",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        8,
+        4
+      ],
+      "t": 90
+    },
+    {
+      "action": "AVANCER",
+      "argument": "N",
+      "casier": [
+        1,
+        7
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 2,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "resident"
+      },
+      "position": [
+        8,
+        5
+      ],
+      "t": 91
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        1,
+        7
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 2,
+      "perception": {
+        "E": "libre",
+        "N": "mur",
+        "O": "mur",
+        "S": "libre"
+      },
+      "position": [
+        7,
+        5
+      ],
+      "t": 92
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        1,
+        7
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 2,
+      "perception": {
+        "E": "libre",
+        "N": "mur",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        7,
+        6
+      ],
+      "t": 93
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        1,
+        7
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 2,
+      "perception": {
+        "E": "libre",
+        "N": "mur",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        7,
+        7
+      ],
+      "t": 94
+    },
+    {
+      "action": "AVANCER",
+      "argument": "N",
+      "casier": [
+        1,
+        7
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 2,
+      "perception": {
+        "E": "mur",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        7,
+        8
+      ],
+      "t": 95
+    },
+    {
+      "action": "AVANCER",
+      "argument": "N",
+      "casier": [
+        1,
+        7
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 2,
+      "perception": {
+        "E": "mur",
+        "N": "libre",
+        "O": "mur",
+        "S": "libre"
+      },
+      "position": [
+        6,
+        8
+      ],
+      "t": 96
+    },
+    {
+      "action": "AVANCER",
+      "argument": "N",
+      "casier": [
+        1,
+        7
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 2,
+      "perception": {
+        "E": "mur",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        5,
+        8
+      ],
+      "t": 97
+    },
+    {
+      "action": "AVANCER",
+      "argument": "N",
+      "casier": [
+        1,
+        7
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 2,
+      "perception": {
+        "E": "mur",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        4,
+        8
+      ],
+      "t": 98
+    },
+    {
+      "action": "AVANCER",
+      "argument": "N",
+      "casier": [
+        1,
+        7
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 2,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        3,
+        8
+      ],
+      "t": 99
+    },
+    {
+      "action": "AVANCER",
+      "argument": "N",
+      "casier": [
+        1,
+        7
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 2,
+      "perception": {
+        "E": "mur",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        2,
+        8
+      ],
+      "t": 100
+    },
+    {
+      "action": "AVANCER",
+      "argument": "S",
+      "casier": [
+        1,
+        7
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 2,
+      "perception": {
+        "E": "mur",
+        "N": "mur",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        1,
+        8
+      ],
+      "t": 101
+    },
+    {
+      "action": "AVANCER",
+      "argument": "S",
+      "casier": [
+        1,
+        7
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 2,
+      "perception": {
+        "E": "mur",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        2,
+        8
+      ],
+      "t": 102
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        1,
+        7
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 2,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        3,
+        8
+      ],
+      "t": 103
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        1,
+        7
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 2,
+      "perception": {
+        "E": "libre",
+        "N": "mur",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        3,
+        9
+      ],
+      "t": 104
+    },
+    {
+      "action": "AVANCER",
+      "argument": "N",
+      "casier": [
+        1,
+        7
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 2,
+      "perception": {
+        "E": "resident",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        3,
+        10
+      ],
+      "t": 105
+    },
+    {
+      "action": "AVANCER",
+      "argument": "N",
+      "casier": [
+        1,
+        7
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 2,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "mur",
+        "S": "libre"
+      },
+      "position": [
+        2,
+        10
+      ],
+      "t": 106
+    },
+    {
+      "action": "DONNER",
+      "argument": "calendrier",
+      "casier": [
+        1,
+        7
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 2,
+      "perception": {
+        "E": "resident",
+        "N": "mur",
+        "O": "mur",
+        "S": "libre"
+      },
+      "position": [
+        1,
+        10
+      ],
+      "t": 107
+    },
+    {
+      "action": "AVANCER",
+      "argument": "S",
+      "casier": [
+        1,
+        7
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 3,
+      "perception": {
+        "E": "resident",
+        "N": "mur",
+        "O": "mur",
+        "S": "libre"
+      },
+      "position": [
+        1,
+        10
+      ],
+      "t": 108
+    },
+    {
+      "action": "AVANCER",
+      "argument": "S",
+      "casier": [
+        1,
+        7
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 3,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "mur",
+        "S": "libre"
+      },
+      "position": [
+        2,
+        10
+      ],
+      "t": 109
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        1,
+        7
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 3,
+      "perception": {
+        "E": "resident",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        3,
+        10
+      ],
+      "t": 110
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        1,
+        7
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 3,
+      "perception": {
+        "E": "libre",
+        "N": "mur",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        3,
+        9
+      ],
+      "t": 111
+    },
+    {
+      "action": "AVANCER",
+      "argument": "S",
+      "casier": [
+        1,
+        7
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 3,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        3,
+        8
+      ],
+      "t": 112
+    },
+    {
+      "action": "AVANCER",
+      "argument": "S",
+      "casier": [
+        1,
+        7
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 3,
+      "perception": {
+        "E": "mur",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        4,
+        8
+      ],
+      "t": 113
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        1,
+        7
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 3,
+      "perception": {
+        "E": "mur",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        5,
+        8
+      ],
+      "t": 114
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        1,
+        7
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 3,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        5,
+        7
+      ],
+      "t": 115
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        1,
+        7
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 3,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        5,
+        6
+      ],
+      "t": 116
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        1,
+        7
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 3,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        5,
+        5
+      ],
+      "t": 117
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        1,
+        7
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 3,
+      "perception": {
+        "E": "libre",
+        "N": "mur",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        5,
+        4
+      ],
+      "t": 118
+    },
+    {
+      "action": "AVANCER",
+      "argument": "N",
+      "casier": [
+        1,
+        7
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 3,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        5,
+        3
+      ],
+      "t": 119
+    },
+    {
+      "action": "CONSULTER",
+      "argument": null,
+      "casier": [
+        1,
+        7
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 3,
+      "perception": {
+        "E": "mur",
+        "N": "dictionnaire",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        4,
+        3
+      ],
+      "t": 120
+    },
+    {
+      "action": "AVANCER",
+      "argument": "S",
+      "casier": [
+        1,
+        7
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 3,
+      "perception": {
+        "E": "mur",
+        "N": "dictionnaire",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        4,
+        3
+      ],
+      "t": 121
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        1,
+        7
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 3,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        5,
+        3
+      ],
+      "t": 122
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        1,
+        7
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 3,
+      "perception": {
+        "E": "libre",
+        "N": "mur",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        5,
+        4
+      ],
+      "t": 123
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        1,
+        7
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 3,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        5,
+        5
+      ],
+      "t": 124
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        1,
+        7
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 3,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        5,
+        6
+      ],
+      "t": 125
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        1,
+        7
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 3,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        5,
+        7
+      ],
+      "t": 126
+    },
+    {
+      "action": "AVANCER",
+      "argument": "S",
+      "casier": [
+        1,
+        7
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 3,
+      "perception": {
+        "E": "mur",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        5,
+        8
+      ],
+      "t": 127
+    },
+    {
+      "action": "AVANCER",
+      "argument": "S",
+      "casier": [
+        1,
+        7
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 3,
+      "perception": {
+        "E": "mur",
+        "N": "libre",
+        "O": "mur",
+        "S": "libre"
+      },
+      "position": [
+        6,
+        8
+      ],
+      "t": 128
+    },
+    {
+      "action": "AVANCER",
+      "argument": "S",
+      "casier": [
+        1,
+        7
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 3,
+      "perception": {
+        "E": "mur",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        7,
+        8
+      ],
+      "t": 129
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        1,
+        7
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 3,
+      "perception": {
+        "E": "mur",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        8,
+        8
+      ],
+      "t": 130
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        1,
+        7
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 3,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        8,
+        7
+      ],
+      "t": 131
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        1,
+        7
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 3,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        8,
+        6
+      ],
+      "t": 132
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        1,
+        7
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 3,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "resident"
+      },
+      "position": [
+        8,
+        5
+      ],
+      "t": 133
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        1,
+        7
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 3,
+      "perception": {
+        "E": "libre",
+        "N": "mur",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        8,
+        4
+      ],
+      "t": 134
+    },
+    {
+      "action": "CHERCHER",
+      "argument": "O",
+      "casier": [
+        1,
+        7
+      ],
+      "commentaire": null,
+      "contenu_casier": "calendrier",
+      "demande": 3,
+      "perception": {
+        "E": "libre",
+        "N": "armoire",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        8,
+        3
+      ],
+      "t": 135
+    },
+    {
+      "action": "CHERCHER",
+      "argument": "O",
+      "casier": [
+        1,
+        6
+      ],
+      "commentaire": null,
+      "contenu_casier": "casque audio",
+      "demande": 3,
+      "perception": {
+        "E": "libre",
+        "N": "armoire",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        8,
+        3
+      ],
+      "t": 136
+    },
+    {
+      "action": "PRENDRE",
+      "argument": "desodorisant",
+      "casier": [
+        1,
+        5
+      ],
+      "commentaire": null,
+      "contenu_casier": "desodorisant",
+      "demande": 3,
+      "perception": {
+        "E": "libre",
+        "N": "armoire",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        8,
+        3
+      ],
+      "t": 137
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        1,
+        5
+      ],
+      "commentaire": null,
+      "contenu_casier": "desodorisant",
+      "demande": 3,
+      "perception": {
+        "E": "libre",
+        "N": "armoire",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        8,
+        3
+      ],
+      "t": 138
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        1,
+        5
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 3,
+      "perception": {
+        "E": "libre",
+        "N": "mur",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        8,
+        4
+      ],
+      "t": 139
+    },
+    {
+      "action": "AVANCER",
+      "argument": "N",
+      "casier": [
+        1,
+        5
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 3,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "resident"
+      },
+      "position": [
+        8,
+        5
+      ],
+      "t": 140
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        1,
+        5
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 3,
+      "perception": {
+        "E": "libre",
+        "N": "mur",
+        "O": "mur",
+        "S": "libre"
+      },
+      "position": [
+        7,
+        5
+      ],
+      "t": 141
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        1,
+        5
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 3,
+      "perception": {
+        "E": "libre",
+        "N": "mur",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        7,
+        6
+      ],
+      "t": 142
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        1,
+        5
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 3,
+      "perception": {
+        "E": "libre",
+        "N": "mur",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        7,
+        7
+      ],
+      "t": 143
+    },
+    {
+      "action": "AVANCER",
+      "argument": "N",
+      "casier": [
+        1,
+        5
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 3,
+      "perception": {
+        "E": "mur",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        7,
+        8
+      ],
+      "t": 144
+    },
+    {
+      "action": "AVANCER",
+      "argument": "N",
+      "casier": [
+        1,
+        5
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 3,
+      "perception": {
+        "E": "mur",
+        "N": "libre",
+        "O": "mur",
+        "S": "libre"
+      },
+      "position": [
+        6,
+        8
+      ],
+      "t": 145
+    },
+    {
+      "action": "AVANCER",
+      "argument": "N",
+      "casier": [
+        1,
+        5
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 3,
+      "perception": {
+        "E": "mur",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        5,
+        8
+      ],
+      "t": 146
+    },
+    {
+      "action": "AVANCER",
+      "argument": "N",
+      "casier": [
+        1,
+        5
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 3,
+      "perception": {
+        "E": "mur",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        4,
+        8
+      ],
+      "t": 147
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        1,
+        5
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 3,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        3,
+        8
+      ],
+      "t": 148
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        1,
+        5
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 3,
+      "perception": {
+        "E": "libre",
+        "N": "mur",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        3,
+        9
+      ],
+      "t": 149
+    },
+    {
+      "action": "DONNER",
+      "argument": "desodorisant",
+      "casier": [
+        1,
+        5
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 3,
+      "perception": {
+        "E": "resident",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        3,
+        10
+      ],
+      "t": 150
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        1,
+        5
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 4,
+      "perception": {
+        "E": "resident",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        3,
+        10
+      ],
+      "t": 151
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        1,
+        5
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 4,
+      "perception": {
+        "E": "libre",
+        "N": "mur",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        3,
+        9
+      ],
+      "t": 152
+    },
+    {
+      "action": "AVANCER",
+      "argument": "S",
+      "casier": [
+        1,
+        5
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 4,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        3,
+        8
+      ],
+      "t": 153
+    },
+    {
+      "action": "AVANCER",
+      "argument": "S",
+      "casier": [
+        1,
+        5
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 4,
+      "perception": {
+        "E": "mur",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        4,
+        8
+      ],
+      "t": 154
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        1,
+        5
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 4,
+      "perception": {
+        "E": "mur",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        5,
+        8
+      ],
+      "t": 155
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        1,
+        5
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 4,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        5,
+        7
+      ],
+      "t": 156
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        1,
+        5
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 4,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        5,
+        6
+      ],
+      "t": 157
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        1,
+        5
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 4,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        5,
+        5
+      ],
+      "t": 158
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        1,
+        5
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 4,
+      "perception": {
+        "E": "libre",
+        "N": "mur",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        5,
+        4
+      ],
+      "t": 159
+    },
+    {
+      "action": "AVANCER",
+      "argument": "N",
+      "casier": [
+        1,
+        5
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 4,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        5,
+        3
+      ],
+      "t": 160
+    },
+    {
+      "action": "CONSULTER",
+      "argument": null,
+      "casier": [
+        1,
+        5
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 4,
+      "perception": {
+        "E": "mur",
+        "N": "dictionnaire",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        4,
+        3
+      ],
+      "t": 161
+    },
+    {
+      "action": "AVANCER",
+      "argument": "S",
+      "casier": [
+        1,
+        5
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 4,
+      "perception": {
+        "E": "mur",
+        "N": "dictionnaire",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        4,
+        3
+      ],
+      "t": 162
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        1,
+        5
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 4,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        5,
+        3
+      ],
+      "t": 163
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        1,
+        5
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 4,
+      "perception": {
+        "E": "libre",
+        "N": "mur",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        5,
+        4
+      ],
+      "t": 164
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        1,
+        5
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 4,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        5,
+        5
+      ],
+      "t": 165
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        1,
+        5
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 4,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        5,
+        6
+      ],
+      "t": 166
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        1,
+        5
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 4,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        5,
+        7
+      ],
+      "t": 167
+    },
+    {
+      "action": "AVANCER",
+      "argument": "S",
+      "casier": [
+        1,
+        5
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 4,
+      "perception": {
+        "E": "mur",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        5,
+        8
+      ],
+      "t": 168
+    },
+    {
+      "action": "AVANCER",
+      "argument": "S",
+      "casier": [
+        1,
+        5
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 4,
+      "perception": {
+        "E": "mur",
+        "N": "libre",
+        "O": "mur",
+        "S": "libre"
+      },
+      "position": [
+        6,
+        8
+      ],
+      "t": 169
+    },
+    {
+      "action": "AVANCER",
+      "argument": "S",
+      "casier": [
+        1,
+        5
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 4,
+      "perception": {
+        "E": "mur",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        7,
+        8
+      ],
+      "t": 170
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        1,
+        5
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 4,
+      "perception": {
+        "E": "mur",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        8,
+        8
+      ],
+      "t": 171
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        1,
+        5
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 4,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        8,
+        7
+      ],
+      "t": 172
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        1,
+        5
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 4,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        8,
+        6
+      ],
+      "t": 173
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        1,
+        5
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 4,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "resident"
+      },
+      "position": [
+        8,
+        5
+      ],
+      "t": 174
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        1,
+        5
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 4,
+      "perception": {
+        "E": "libre",
+        "N": "mur",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        8,
+        4
+      ],
+      "t": 175
+    },
+    {
+      "action": "CHERCHER",
+      "argument": "N",
+      "casier": [
+        1,
+        5
+      ],
+      "commentaire": null,
+      "contenu_casier": "desodorisant",
+      "demande": 4,
+      "perception": {
+        "E": "libre",
+        "N": "armoire",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        8,
+        3
+      ],
+      "t": 176
+    },
+    {
+      "action": "CHERCHER",
+      "argument": "O",
+      "casier": [
+        0,
+        5
+      ],
+      "commentaire": null,
+      "contenu_casier": "livre",
+      "demande": 4,
+      "perception": {
+        "E": "libre",
+        "N": "armoire",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        8,
+        3
+      ],
+      "t": 177
+    },
+    {
+      "action": "PRENDRE",
+      "argument": "mouchoirs",
+      "casier": [
+        0,
+        4
+      ],
+      "commentaire": null,
+      "contenu_casier": "mouchoirs",
+      "demande": 4,
+      "perception": {
+        "E": "libre",
+        "N": "armoire",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        8,
+        3
+      ],
+      "t": 178
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        0,
+        4
+      ],
+      "commentaire": null,
+      "contenu_casier": "mouchoirs",
+      "demande": 4,
+      "perception": {
+        "E": "libre",
+        "N": "armoire",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        8,
+        3
+      ],
+      "t": 179
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        0,
+        4
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 4,
+      "perception": {
+        "E": "libre",
+        "N": "mur",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        8,
+        4
+      ],
+      "t": 180
+    },
+    {
+      "action": "DONNER",
+      "argument": "mouchoirs",
+      "casier": [
+        0,
+        4
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 4,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "resident"
+      },
+      "position": [
+        8,
+        5
+      ],
+      "t": 181
+    },
+    {
+      "action": "AVANCER",
+      "argument": "N",
+      "casier": [
+        0,
+        4
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 5,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "resident"
+      },
+      "position": [
+        8,
+        5
+      ],
+      "t": 182
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        0,
+        4
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 5,
+      "perception": {
+        "E": "libre",
+        "N": "mur",
+        "O": "mur",
+        "S": "libre"
+      },
+      "position": [
+        7,
+        5
+      ],
+      "t": 183
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        0,
+        4
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 5,
+      "perception": {
+        "E": "libre",
+        "N": "mur",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        7,
+        6
+      ],
+      "t": 184
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        0,
+        4
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 5,
+      "perception": {
+        "E": "libre",
+        "N": "mur",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        7,
+        7
+      ],
+      "t": 185
+    },
+    {
+      "action": "AVANCER",
+      "argument": "N",
+      "casier": [
+        0,
+        4
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 5,
+      "perception": {
+        "E": "mur",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        7,
+        8
+      ],
+      "t": 186
+    },
+    {
+      "action": "AVANCER",
+      "argument": "N",
+      "casier": [
+        0,
+        4
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 5,
+      "perception": {
+        "E": "mur",
+        "N": "libre",
+        "O": "mur",
+        "S": "libre"
+      },
+      "position": [
+        6,
+        8
+      ],
+      "t": 187
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        0,
+        4
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 5,
+      "perception": {
+        "E": "mur",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        5,
+        8
+      ],
+      "t": 188
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        0,
+        4
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 5,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        5,
+        7
+      ],
+      "t": 189
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        0,
+        4
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 5,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        5,
+        6
+      ],
+      "t": 190
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        0,
+        4
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 5,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        5,
+        5
+      ],
+      "t": 191
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        0,
+        4
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 5,
+      "perception": {
+        "E": "libre",
+        "N": "mur",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        5,
+        4
+      ],
+      "t": 192
+    },
+    {
+      "action": "AVANCER",
+      "argument": "N",
+      "casier": [
+        0,
+        4
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 5,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        5,
+        3
+      ],
+      "t": 193
+    },
+    {
+      "action": "CONSULTER",
+      "argument": null,
+      "casier": [
+        0,
+        4
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 5,
+      "perception": {
+        "E": "mur",
+        "N": "dictionnaire",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        4,
+        3
+      ],
+      "t": 194
+    },
+    {
+      "action": "AVANCER",
+      "argument": "S",
+      "casier": [
+        0,
+        4
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 5,
+      "perception": {
+        "E": "mur",
+        "N": "dictionnaire",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        4,
+        3
+      ],
+      "t": 195
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        0,
+        4
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 5,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        5,
+        3
+      ],
+      "t": 196
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        0,
+        4
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 5,
+      "perception": {
+        "E": "libre",
+        "N": "mur",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        5,
+        4
+      ],
+      "t": 197
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        0,
+        4
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 5,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        5,
+        5
+      ],
+      "t": 198
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        0,
+        4
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 5,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        5,
+        6
+      ],
+      "t": 199
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        0,
+        4
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 5,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        5,
+        7
+      ],
+      "t": 200
+    },
+    {
+      "action": "AVANCER",
+      "argument": "S",
+      "casier": [
+        0,
+        4
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 5,
+      "perception": {
+        "E": "mur",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        5,
+        8
+      ],
+      "t": 201
+    },
+    {
+      "action": "AVANCER",
+      "argument": "S",
+      "casier": [
+        0,
+        4
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 5,
+      "perception": {
+        "E": "mur",
+        "N": "libre",
+        "O": "mur",
+        "S": "libre"
+      },
+      "position": [
+        6,
+        8
+      ],
+      "t": 202
+    },
+    {
+      "action": "AVANCER",
+      "argument": "S",
+      "casier": [
+        0,
+        4
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 5,
+      "perception": {
+        "E": "mur",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        7,
+        8
+      ],
+      "t": 203
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        0,
+        4
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 5,
+      "perception": {
+        "E": "mur",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        8,
+        8
+      ],
+      "t": 204
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        0,
+        4
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 5,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        8,
+        7
+      ],
+      "t": 205
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        0,
+        4
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 5,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        8,
+        6
+      ],
+      "t": 206
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        0,
+        4
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 5,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "resident"
+      },
+      "position": [
+        8,
+        5
+      ],
+      "t": 207
+    },
+    {
+      "action": "AVANCER",
+      "argument": "O",
+      "casier": [
+        0,
+        4
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 5,
+      "perception": {
+        "E": "libre",
+        "N": "mur",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        8,
+        4
+      ],
+      "t": 208
+    },
+    {
+      "action": "CHERCHER",
+      "argument": "S",
+      "casier": [
+        0,
+        4
+      ],
+      "commentaire": null,
+      "contenu_casier": "mouchoirs",
+      "demande": 5,
+      "perception": {
+        "E": "libre",
+        "N": "armoire",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        8,
+        3
+      ],
+      "t": 209
+    },
+    {
+      "action": "CHERCHER",
+      "argument": "O",
+      "casier": [
+        1,
+        4
+      ],
+      "commentaire": null,
+      "contenu_casier": "couverture",
+      "demande": 5,
+      "perception": {
+        "E": "libre",
+        "N": "armoire",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        8,
+        3
+      ],
+      "t": 210
+    },
+    {
+      "action": "CHERCHER",
+      "argument": "O",
+      "casier": [
+        1,
+        3
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 5,
+      "perception": {
+        "E": "libre",
+        "N": "armoire",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        8,
+        3
+      ],
+      "t": 211
+    },
+    {
+      "action": "CHERCHER",
+      "argument": "O",
+      "casier": [
+        1,
+        2
+      ],
+      "commentaire": null,
+      "contenu_casier": "lampe torche",
+      "demande": 5,
+      "perception": {
+        "E": "libre",
+        "N": "armoire",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        8,
+        3
+      ],
+      "t": 212
+    },
+    {
+      "action": "PRENDRE",
+      "argument": "plaid",
+      "casier": [
+        1,
+        1
+      ],
+      "commentaire": null,
+      "contenu_casier": "plaid",
+      "demande": 5,
+      "perception": {
+        "E": "libre",
+        "N": "armoire",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        8,
+        3
+      ],
+      "t": 213
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        1,
+        1
+      ],
+      "commentaire": null,
+      "contenu_casier": "plaid",
+      "demande": 5,
+      "perception": {
+        "E": "libre",
+        "N": "armoire",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        8,
+        3
+      ],
+      "t": 214
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        1,
+        1
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 5,
+      "perception": {
+        "E": "libre",
+        "N": "mur",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        8,
+        4
+      ],
+      "t": 215
+    },
+    {
+      "action": "AVANCER",
+      "argument": "N",
+      "casier": [
+        1,
+        1
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 5,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "resident"
+      },
+      "position": [
+        8,
+        5
+      ],
+      "t": 216
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        1,
+        1
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 5,
+      "perception": {
+        "E": "libre",
+        "N": "mur",
+        "O": "mur",
+        "S": "libre"
+      },
+      "position": [
+        7,
+        5
+      ],
+      "t": 217
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        1,
+        1
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 5,
+      "perception": {
+        "E": "libre",
+        "N": "mur",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        7,
+        6
+      ],
+      "t": 218
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        1,
+        1
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 5,
+      "perception": {
+        "E": "libre",
+        "N": "mur",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        7,
+        7
+      ],
+      "t": 219
+    },
+    {
+      "action": "AVANCER",
+      "argument": "N",
+      "casier": [
+        1,
+        1
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 5,
+      "perception": {
+        "E": "mur",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        7,
+        8
+      ],
+      "t": 220
+    },
+    {
+      "action": "AVANCER",
+      "argument": "N",
+      "casier": [
+        1,
+        1
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 5,
+      "perception": {
+        "E": "mur",
+        "N": "libre",
+        "O": "mur",
+        "S": "libre"
+      },
+      "position": [
+        6,
+        8
+      ],
+      "t": 221
+    },
+    {
+      "action": "AVANCER",
+      "argument": "N",
+      "casier": [
+        1,
+        1
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 5,
+      "perception": {
+        "E": "mur",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        5,
+        8
+      ],
+      "t": 222
+    },
+    {
+      "action": "AVANCER",
+      "argument": "N",
+      "casier": [
+        1,
+        1
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 5,
+      "perception": {
+        "E": "mur",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        4,
+        8
+      ],
+      "t": 223
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        1,
+        1
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 5,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        3,
+        8
+      ],
+      "t": 224
+    },
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        1,
+        1
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 5,
+      "perception": {
+        "E": "libre",
+        "N": "mur",
+        "O": "libre",
+        "S": "mur"
+      },
+      "position": [
+        3,
+        9
+      ],
+      "t": 225
+    },
+    {
+      "action": "AVANCER",
+      "argument": "N",
+      "casier": [
+        1,
+        1
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 5,
+      "perception": {
+        "E": "resident",
+        "N": "libre",
+        "O": "libre",
+        "S": "libre"
+      },
+      "position": [
+        3,
+        10
+      ],
+      "t": 226
+    },
+    {
+      "action": "AVANCER",
+      "argument": "N",
+      "casier": [
+        1,
+        1
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 5,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "mur",
+        "S": "libre"
+      },
+      "position": [
+        2,
+        10
+      ],
+      "t": 227
+    },
+    {
+      "action": "DONNER",
+      "argument": "plaid",
+      "casier": [
+        1,
+        1
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 5,
+      "perception": {
+        "E": "resident",
+        "N": "mur",
+        "O": "mur",
+        "S": "libre"
+      },
+      "position": [
+        1,
+        10
+      ],
+      "t": 228
+    }
+  ],
+  "resume": {
+    "demandes": 5,
+    "echecs": 0,
+    "pas_total": 229,
+    "reussies": 5
+  },
+  "scenario": "scenario_02",
+  "version": 1
+}

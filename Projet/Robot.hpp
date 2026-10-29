@@ -6,6 +6,9 @@
 #include "Position.hpp"
 #include "Parcours.hpp"
 #include "Fouille.hpp"
+#include "Trace.hpp"
+#include "Demande.hpp"
+#include "Dictionnaire.hpp"
 
 class Robot {
 private:
@@ -32,9 +35,17 @@ private:
     Fouille fouilleCourante;       // le résultat de la fouille pour la demande en cours
     //combien d'action de CHERCHER deja fait
     //quand la fouille va nous donner le chemin de S S N E O ...
-    //on va déplacer cet entier pour faire bouger le selecteur
     //donc remis à 0 à chaque demande
     int prochainChercher = 0;
+
+
+    //Trace
+    Trace trace;
+    int debutDemande = 0;          // indice du 1er pas de la demande en cours (pour pas_utilises)
+    // position du sélecteur telle qu'elle doit apparaître dans la trace :
+    // elle avance d'une case par CHERCHER, contrairement au vrai sélecteur (déplacé d'un coup)
+    Position selecteurTrace;
+ 
 
 
     static Direction directionEntre(const Position& depart, const Position& arrivee) {
@@ -46,7 +57,10 @@ private:
 
     void avancerSelonChemin() {
         if (cheminActuel.size() >= 2) {
-            avancer(directionEntre(cheminActuel[0], cheminActuel[1]));
+            
+            Direction d = directionEntre(cheminActuel[0], cheminActuel[1]);
+            ecriturePas("AVANCER", lettre(d)); //trace
+            avancer(d);
         }
     }
 
@@ -58,6 +72,88 @@ private:
             if (liste[i] == valeur) return i;
         return -1;
     }
+
+    // ===================== TRACE =====================
+ 
+    // Direction -> N S E O , en string
+    std::string lettre(Direction d) {
+        switch (d) {
+            case N: return "N";
+            case S: return "S";
+            case E: return "E";
+            default: return "O";
+        }
+    }
+ 
+    // Symbole de la vraie grille
+    std::string nomPerception(char symbole) {
+        switch (symbole) {
+            case '#': return "mur";
+            case 'A': return "armoire";
+            case 'D': return "dictionnaire";
+            case 'P': return "resident";
+            default:  return "libre";      // '.' et 'R'
+        }
+    }
+ 
+    // Enregistre un pas dans la trace.
+    // position, casier et perception sont ceux d'avant l'action. Donc c'rest a appeler avant l'action
+    void ecriturePas(const std::string& action, const std::string& argument) {
+        Pas p;
+        p.t = (int)trace.pas.size();
+        p.demande = numeroDemandeCourante;
+        p.position = position;
+        p.casier = selecteurTrace;
+        p.action = action;
+        p.argument = argument;
+ 
+        // ce que le robot voit autour de lui, dans la vraie grille (ordre N, S, E, O)
+        //c'est une fonctions du parcours mais ça marche très bien ici
+        std::vector<Position> autour = voisins(position);
+        //On ne peut pas faire grilleComplete.getSymboleCase(..) parceque c'est un ptr donc ->
+        p.perceptionN = nomPerception(grilleComplete->getSymboleCase(autour[0]));
+        p.perceptionS = nomPerception(grilleComplete->getSymboleCase(autour[1]));
+        p.perceptionE = nomPerception(grilleComplete->getSymboleCase(autour[2]));
+        p.perceptionO = nomPerception(grilleComplete->getSymboleCase(autour[3]));
+ 
+        // contenu du casier sous le sélecteur, seulement si le robot est devant l'armoire
+        bool devantArmoire = contient(autour, grille.getPositionArmoire());
+        if (devantArmoire) {
+            Casier c = armoire.getCasierCase(selecteurTrace.getX(), selecteurTrace.getY());
+            p.contenuCasier = c.getObjet();
+        }
+ 
+        trace.pas.push_back(p);
+    }
+ 
+    // Enregistre la livraison de la demande en cours
+    void ecritureLivraison(bool succes, const std::string& motifEchec) {
+        Livraison l;
+        l.demande = numeroDemandeCourante;
+        l.resident = demandes[numeroDemandeCourante - 1].getIdRes();
+        l.emotion = emotionCourante.first;
+        l.intensite = emotionCourante.second;
+        if (!fouilleCourante.objet.empty() && succes) {
+            l.casierChoisi = fouilleCourante.casier;
+            l.repli = repliEnTexte(fouilleCourante.repli);
+            l.objet = fouilleCourante.objet;
+        }
+        l.pasUtilises = (int)trace.pas.size() - debutDemande;
+        l.succes = succes;
+        l.motifEchec = motifEchec;
+        trace.livraisons.push_back(l);
+    }
+ 
+    // Fin d'une demande (réussie ou ratée) : on remet tout à zéro
+    void passerDemandeSuivante() {
+        objetEnMain.clear();
+        emotionCourante = {"", ""};
+        prochainChercher = 0;
+        fouilleCourante = Fouille();
+        numeroDemandeCourante++;
+        debutDemande = (int)trace.pas.size();
+    }
+
 
 public:
     Robot() : position(), grille(), grilleComplete(nullptr), dimensions{0, 0},
@@ -87,6 +183,7 @@ public:
         }
 
         position = grille.getPositionDepart();
+        selecteurTrace = armoire.getSelecteur();    //trace
     }
 
     void updateGrille(){
@@ -110,13 +207,14 @@ public:
     }
 
     void donner(){
-        objetEnMain.clear();
-        emotionCourante = {"", ""};
-        prochainChercher = 0;
-        numeroDemandeCourante++;
+        //trace
+        ecriturePas("DONNER", objetEnMain);
+        ecritureLivraison(true, "");
+        passerDemandeSuivante();
     }
 
     void consulter(){
+        ecriturePas("CONSULTER", "");
         emotionCourante = dictionnaire.consulter(demandes[numeroDemandeCourante - 1].getMessage());
     }
 
@@ -132,19 +230,24 @@ public:
 
         // tant qu'il reste des CHERCHER : on en joue un par tour
         if (prochainChercher < (int)fouilleCourante.mouvements.size()) {
+            //4 lignes de trace
+            Direction d = fouilleCourante.mouvements[prochainChercher];
+            ecriturePas("CHERCHER", lettre(d));                            // casier AVANT le mouvement
+            selecteurTrace.deplacement(d);                                 // le sélecteur de la trace avance d'une case
+            selecteurTrace.setY((selecteurTrace.getY() + 8) % 8);          // bouclage des colonnes, donc X pas concerné
+            
             prochainChercher++;
             return;
         }
 
         // tous les CHERCHER sont faits
         if (fouilleCourante.succes) {
+            ecriturePas("PRENDRE", fouilleCourante.objet);
             objetEnMain = fouilleCourante.objet;   // PRENDRE : le robot tient l'objet
             prochainChercher = 0;
         } else {                    //Armoire vide
-            objetEnMain.clear();
-            emotionCourante = {"", ""};
-            prochainChercher = 0;
-            numeroDemandeCourante++;              
+            ecritureLivraison(false, "armoire vide");
+            passerDemandeSuivante();
         }
     }
     
@@ -193,6 +296,7 @@ public:
     const Position& getPosition() const { return position; }
     const Grille& getGrille() const { return grille; }
     const std::string& getObjetEnMain() const { return objetEnMain; }
+    const Trace& getTrace() const { return trace; }
     int getNumeroDemandeCourante() const { return numeroDemandeCourante; }
     
     void setObjetEnMain(const std::string& objet) { objetEnMain = objet; }
