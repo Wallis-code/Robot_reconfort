@@ -184,6 +184,8 @@ public:
 
         position = grille.getPositionDepart();
         selecteurTrace = armoire.getSelecteur();    //trace
+
+        updateGrille();
     }
 
     void updateGrille(){
@@ -210,6 +212,12 @@ public:
         //trace
         ecriturePas("DONNER", objetEnMain);
         ecritureLivraison(true, "");
+        passerDemandeSuivante();
+    }
+
+    void echouer(std::string motifEchec){
+        ecriturePas("ATTENDRE", "");
+        ecritureLivraison(false, motifEchec);
         passerDemandeSuivante();
     }
 
@@ -264,6 +272,11 @@ public:
                 return;
             } else {    // Si le robot n'est pas à côté du résident
                 cheminActuel = plusCourtChemin(grille, position, grille.getPositionResident(demandes[numeroDemandeCourante - 1].getIdRes()));
+                if(cheminActuel.empty()) {
+                    // Si le chemin est vide, cela signifie qu'il n'y a pas de chemin vers le résident
+                    echouer("pas de chemin vers le resident");
+                    return;
+                }
                 avancerSelonChemin();
                 return;
             }
@@ -276,6 +289,11 @@ public:
                     return;
                 } else {    // Si le robot n'est pas à côté de l'armoire
                     cheminActuel = plusCourtChemin(grille, position, grille.getPositionArmoire());
+                    if(cheminActuel.empty()) {
+                        // Si le chemin est vide, cela signifie qu'il n'y a pas de chemin vers l'armoire
+                        echouer("pas de chemin vers l'armoire"); // On boucle les demandes jusqu'à ce que le robot finisse
+                        return;
+                    }
                     avancerSelonChemin();
                     return;
                 }
@@ -286,6 +304,18 @@ public:
                     return;
                 } else {    // Si le robot n'est pas à côté du dictionnaire
                     cheminActuel = plusCourtChemin(grille, position, grille.getPositionDictionnaire());
+                    std::cout << "cheminActuel.size() = " << cheminActuel.size() << std::endl;
+                    std::cout << "cheminActuel = ";
+                    for (const Position& pos : cheminActuel) {
+                        std::cout << "(" << pos.getX() << ", " << pos.getY() << ") ";
+                    }
+                    grille.afficher();
+                    std::cout << std::endl;
+                    if(cheminActuel.empty()) {
+                        // Si le chemin est vide, cela signifie qu'il n'y a pas de chemin vers le dictionnaire
+                        echouer("pas de chemin vers le dictionnaire"); // On boucle les demandes jusqu'à ce que le robot finisse
+                        return;
+                    }
                     avancerSelonChemin();
                     return;
                 }
