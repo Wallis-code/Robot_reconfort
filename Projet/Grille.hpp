@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include "json.hpp"
 #include "Position.hpp"
 #include "Case.hpp"
 #include <vector>
@@ -13,7 +14,7 @@ public:
     //constructeurs
     Grille() : dimensions{0, 0} {}
 
-    Grille(json data){
+    Grille(nlohmann::json data){
 
         if(!data.contains("dimensions") || !data["dimensions"].is_object()){
             std::cerr << "L'appartement ne contient pas de dimensions." << std::endl;
