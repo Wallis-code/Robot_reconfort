@@ -69,7 +69,7 @@ int main(int argc, char** argv)
         Trace trace = robot.getTrace();
         trace.carte    = infosCarte.at("nom").get<std::string>();
         trace.scenario = infosScenario.at("nom").get<std::string>();
-        trace.equipe   = {"MOREAU Wallis", "Sebastien"};
+        trace.equipe   = {"MOREAU Wallis", "PRATVIEL Sebastien"};
         ecrireTrace(trace, cheminTrace);
     }
     catch (const std::exception& e) {
