@@ -123,3 +123,18 @@ void testDictionnaire(const std::string& cheminMessages,
 
     std::cout << "OK lecture du dictionnaire" << std::endl;
 }
+
+// -------------Test du résident enmuré-----------------
+
+void testResidentEnmure(const std::string& cheminGrille, std::string idResident) {
+    const Grille grille = chargerGrille(cheminGrille);
+    const Position depart = grille.getPositionDepart();
+    const Position resident = grille.getPositionResident(idResident);
+
+    const std::vector<Position> cheminResident =
+        plusCourtChemin(grille, depart, resident);
+
+    assert(cheminResident.empty());
+
+    std::cout << "OK résident enmuré (plusCourtChemin)" << std::endl;
+}

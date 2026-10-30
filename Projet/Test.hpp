@@ -9,7 +9,6 @@
 using json = nlohmann::json;
 
 void testPlanification(const std::string& cheminGrille);
-void testReplanification(const std::string& cheminGrilleInconnue,
-                         const std::string& cheminGrilleMur);
-void testDictionnaire(const std::string& cheminMessages,
-                      const std::string& cheminDictionnaire);
+void testReplanification(const std::string& cheminGrilleInconnue, const std::string& cheminGrilleMur);
+void testDictionnaire(const std::string& cheminMessages, const std::string& cheminDictionnaire);
+void testResidentEnmure(const std::string& cheminGrille, std::string idResident);
