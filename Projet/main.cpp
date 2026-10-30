@@ -6,6 +6,7 @@
 #include "Scenario.hpp"
 #include "Robot.hpp"
 #include "Trace.hpp"
+#include "VerificationCoherenceJSON.hpp"
 #include <fstream>
 #include <iostream>
 #include <stdexcept>
@@ -41,6 +42,15 @@ int main(int argc, char** argv)
         //on recupère que les données d'un truc précis dans le json
         const std::string cheminArmoire = dossierDonnees + "/" + infosScenario.at("armoire").get<std::string>() + ".json";
         const std::string cheminDico    = dossierDonnees + "/dictionnaire.json";
+
+        //verification
+        json jCarte = lireJson(cheminCarte);
+        json jScenario = lireJson(cheminScenario);
+        json jArmoire = lireJson(cheminArmoire);
+        json jDico = lireJson(cheminDico);
+        if (!VerificationCoherenceJSON::verifier(jCarte, jScenario, jArmoire, jDico))
+            throw std::runtime_error("fichier d'entrée invalide ou incohérent");
+
 
         //c_str() passe d'un string à un char*
         Dictionnaire dictionnaire(cheminDico.c_str());
