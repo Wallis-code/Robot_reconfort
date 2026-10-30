@@ -91,3 +91,33 @@ void testReplanification(const std::string& cheminGrilleInconnue,
 
     std::cout << "OK replanification (inconnue puis mur)" << std::endl;
 }
+
+void testDictionnaire(const std::string& cheminMessages,
+                      const std::string& cheminDictionnaire) {
+    Dictionnaire dictionnaire(cheminDictionnaire.c_str());
+    std::ifstream fichier(cheminMessages);
+    assert(fichier.is_open());
+
+    const std::vector<std::pair<std::string, std::string>> attentes = {
+        {"joie", "faible"}, // content
+        {"confiance", "moyenne"},   // confie
+        {"peur", "faible"}, // hesitante
+        {"surprise", "forte"},  // stupefaite
+        {"tristesse", "forte"}, // pleurer
+        {"degout", "moyenne"},  // repugnant
+        {"colere", "moyenne"},  //fachee
+        {"anticipation", "moyenne"},    //impatiente
+        {"", ""},   // ligne vide
+        {"", ""},   // Que mots inconnus
+        {"anticipation", "forte"}   // guette et vide
+    };
+
+    std::string message;
+    for (const auto& attendu : attentes) {
+        assert(std::getline(fichier, message));
+        message = Demande::enMinuscule_public(Demande::retireAccent_public(message));
+        assert(dictionnaire.consulter(message) == attendu);
+    }
+
+    std::cout << "OK lecture du dictionnaire" << std::endl;
+}

@@ -41,6 +41,13 @@ public:
 	Demande(int numeroVal, std::string idResVal, std::string messageVal)
 		: numero(numeroVal), IdRes(std::move(idResVal)), message(enMinuscule(retireAccent(messageVal))) {}
 
+	static std::string retireAccent_public(const std::string& message){
+		return retireAccent(message);
+	}
+	static std::string enMinuscule_public(const std::string& texte){
+		return enMinuscule(texte);
+	}
+
 	int getNumero() const { return numero; }
 	const std::string& getIdRes() const { return IdRes; }
 	const std::string& getMessage() const { return message; }
