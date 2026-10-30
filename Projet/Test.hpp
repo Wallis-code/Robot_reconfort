@@ -1,6 +1,7 @@
 #include "Grille.hpp"
 #include "Parcours.hpp"
 #include "Dictionnaire.hpp"
+#include "Armoire.hpp"
 #include "Demande.hpp"
 #include "json.hpp"
 #include <string>

@@ -92,6 +92,8 @@ void testReplanification(const std::string& cheminGrilleInconnue,
     std::cout << "OK replanification (inconnue puis mur)" << std::endl;
 }
 
+// -------------Test dictionnaire-----------------
+
 void testDictionnaire(const std::string& cheminMessages,
                       const std::string& cheminDictionnaire) {
     Dictionnaire dictionnaire(cheminDictionnaire.c_str());
