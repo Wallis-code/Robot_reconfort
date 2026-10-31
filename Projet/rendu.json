@@ -2,8 +2,8 @@
   "format": "robot-reconfort/rendu",
   "version": 1,
   "equipe": ["MOREAU Wallis", "PRATVIEL Sebastien"],
-  "langage": "C++",
-  "preparation": ["make"],
+  "langage": "C++20",
+  "preparation": [["make"]],
   "commande": ["./programme"],
   "video": "demo.mp4"
 }

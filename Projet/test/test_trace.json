@@ -1,0 +1,91 @@
+{
+  "carte": "appartement_01",
+  "equipe": [
+    "MOREAU Wallis",
+    "PRATVIEL Sebastien"
+  ],
+  "format": "robot-reconfort/trace",
+  "livraisons": [
+    {
+      "casier_choisi": [
+        1,
+        4
+      ],
+      "demande": 1,
+      "emotion": "tristesse",
+      "intensite": "moyenne",
+      "motif_echec": null,
+      "objet": "couverture",
+      "pas_utilises": 34,
+      "repli": "aucun",
+      "resident": "R1",
+      "succes": true
+    },
+    {
+      "casier_choisi": null,
+      "demande": 2,
+      "emotion": null,
+      "intensite": null,
+      "motif_echec": "emotion indeterminee",
+      "objet": null,
+      "pas_utilises": 12,
+      "repli": null,
+      "resident": "R2",
+      "succes": false
+    }
+  ],
+  "pas": [
+    {
+      "action": "AVANCER",
+      "argument": "E",
+      "casier": [
+        1,
+        0
+      ],
+      "commentaire": null,
+      "contenu_casier": null,
+      "demande": 1,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "mur",
+        "S": "libre"
+      },
+      "position": [
+        6,
+        1
+      ],
+      "t": 0
+    },
+    {
+      "action": "CHERCHER",
+      "argument": "E",
+      "casier": [
+        1,
+        3
+      ],
+      "commentaire": null,
+      "contenu_casier": "couverture",
+      "demande": 1,
+      "perception": {
+        "E": "libre",
+        "N": "libre",
+        "O": "armoire",
+        "S": "libre"
+      },
+      "position": [
+        6,
+        5
+      ],
+      "t": 1
+    }
+  ],
+  "resume": {
+    "demandes": 2,
+    "echecs": 1,
+    "pas_total": 2,
+    "reussies": 1
+  },
+  "scenario": "scenario_01",
+  "version": 1
+}
