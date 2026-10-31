@@ -1,5 +1,17 @@
 ENONCE.pdf
 sortie.json
-programme
-build/base_fournie/
+# fichiers du prof
+ENONCE.pdf
 base_fournie/
+
+# compilation
+build/
+programme
+*.o
+*.d
+
+# fichiers créés en lançant le programme ou les tests
+sortie.json
+trace*.json
+test/armoire_test_fouille.json
+test/test_trace.json
