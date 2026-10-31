@@ -6,10 +6,13 @@
 #include "Scenario.hpp"
 #include "Robot.hpp"
 #include "Trace.hpp"
+#include "VerificationCoherenceJSON.hpp"
+#include <chrono>
 #include <fstream>
 #include <iostream>
 #include <stdexcept>
 #include <string>
+#include <thread>
 
 // Lit un fichier json entier (seulement pour récupérer quelques champs comme "nom")
 static json lireJson(const std::string& chemin) {
@@ -18,13 +21,36 @@ static json lireJson(const std::string& chemin) {
     return json::parse(f);
 }
 
+// Affichage pour la vidéo : efface le terminal, redessine la carte mentale
+// et écrit la dernière action jouée
+static void afficherTour(const Robot& robot, int nbDemandes) {
+    std::cout << "\033[2J\033[H";   // efface l'écran et remet le curseur en haut
+    robot.getGrille().afficher();
+
+    const Trace& trace = robot.getTrace();
+    if (!trace.pas.empty()) {
+        const Pas& p = trace.pas.back();
+        std::cout << "\nt = " << p.t
+                  << "   demande " << p.demande << " / " << nbDemandes
+                  << "   action : " << p.action << " " << p.argument
+                  << "   sélecteur : [" << p.casier.getX() << "," << p.casier.getY() << "]";
+        if (!p.contenuCasier.empty()) std::cout << " (" << p.contenuCasier << ")";
+        std::cout << std::endl;
+    }
+    std::cout << "objet porté : " << (robot.getObjetEnMain().empty() ? "-" : robot.getObjetEnMain())
+              << std::endl;
+}
+
 // Contrat d'appel (section 2 du sujet) :
 //   ./programme <carte> <scenario> <dossier de données> <trace à écrire>
+// Option pour la vidéo, en 5e argument (le correcteur n'en passe que 4) :
+//   ./programme <carte> <scenario> <dossier de données> <trace à écrire> --afficher
 int main(int argc, char** argv)
 {
-    if (argc != 5) {
+    const bool afficher = (argc == 6 && std::string(argv[5]) == "--afficher");
+    if (argc != 5 && !afficher) {
         std::cerr << "Usage : " << argv[0]
-                  << " <carte.json> <scenario.json> <dossier_donnees> <trace.json>" << std::endl;
+                  << " <carte.json> <scenario.json> <dossier_donnees> <trace.json> [--afficher]" << std::endl;
         return 1;
     }
 
@@ -42,6 +68,14 @@ int main(int argc, char** argv)
         const std::string cheminArmoire = dossierDonnees + "/" + infosScenario.at("armoire").get<std::string>() + ".json";
         const std::string cheminDico    = dossierDonnees + "/dictionnaire.json";
 
+        //verification
+        json jCarte = lireJson(cheminCarte);
+        json jScenario = lireJson(cheminScenario);
+        json jArmoire = lireJson(cheminArmoire);
+        json jDico = lireJson(cheminDico);
+        if (!VerificationCoherenceJSON::verifier(jCarte, jScenario, jArmoire, jDico))
+            throw std::runtime_error("fichier d'entrée invalide ou incohérent");
+
         //c_str() passe d'un string à un char*
         Dictionnaire dictionnaire(cheminDico.c_str());
         Scenario scenario(cheminScenario.c_str());
@@ -52,13 +86,18 @@ int main(int argc, char** argv)
 
         //----------------------- ROBOT ----------
         Robot robot(grille, demandes, dictionnaire, armoire);
+        const int nbDemandes = (int)demandes.size();
 
         // AU CAS OU
         const int MAX_TOURS = 10000;
         int tours = 0;
-        while (robot.getNumeroDemandeCourante() <= (int)demandes.size() && tours < MAX_TOURS) {
+        while (robot.getNumeroDemandeCourante() <= nbDemandes && tours < MAX_TOURS) {
             robot.choixAction();
             tours++;
+            if (afficher) {
+                afficherTour(robot, nbDemandes);
+                std::this_thread::sleep_for(std::chrono::milliseconds(200));
+            }
         }
         if (tours == MAX_TOURS) {
             //normalement là y'a un pb, possiblement modifié MAX_TOURS

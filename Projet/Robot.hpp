@@ -56,6 +56,12 @@ private:
     }
 
     void avancerSelonChemin() {
+        // aucun chemin, même en supposant libre tout l'inconnu : la cible est inaccessible (annexe B.6)
+        if (cheminActuel.empty()) {
+            ecritureLivraison(false, "resident inaccessible");
+            passerDemandeSuivante();
+            return;
+        }
         if (cheminActuel.size() >= 2) {
             
             Direction d = directionEntre(cheminActuel[0], cheminActuel[1]);
@@ -224,6 +230,11 @@ public:
     void consulter(){
         ecriturePas("CONSULTER", "");
         emotionCourante = dictionnaire.consulter(demandes[numeroDemandeCourante - 1].getMessage());
+        // aucun mot connu dans le message alors ça rate (section 6.3)
+        if (emotionCourante.first.empty()) {
+            ecritureLivraison(false, "emotion indeterminee");
+            passerDemandeSuivante();
+        }
     }
 
     void prendre(){
